@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tkd197557-arch.github.io/foot-vox/sitemap.xml

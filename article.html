@@ -4,6 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="FOOT VOX">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
   <title>FOOT VOX</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="styles.css">
@@ -203,6 +215,15 @@
       const detail = document.querySelector("[data-article-detail]");
       const title = document.querySelector("#article-title");
       const metaDescription = document.querySelector('meta[name="description"]');
+      const metaRobots = document.querySelector('meta[name="robots"]');
+      const canonical = document.querySelector('link[rel="canonical"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      const ogImage = document.querySelector('meta[property="og:image"]');
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+      const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+      const twitterImage = document.querySelector('meta[name="twitter:image"]');
       const summary = document.querySelector("[data-summary-existing]");
       const category = document.querySelector("[data-article-category]");
       const secondaryTag = document.querySelector("[data-article-secondary-tag]");
@@ -220,6 +241,7 @@
       const videoBlock = document.querySelector('[data-block-type="video"]');
       const gifBlock = document.querySelector('[data-block-type="gif"]');
       const requestedId = new URLSearchParams(location.search).get("id");
+      const siteBaseUrl = "https://tkd197557-arch.github.io/foot-vox/";
       const formatDate = (value) => {
         const [year, month, day] = String(value || "").split("-").map(Number);
         return year && month && day ? `${year}年${month}月${day}日` : "";
@@ -309,7 +331,10 @@
         })
         .then((payload) => {
           const articles = payload.articles;
-          const article = articles.find((item) => item.articleId === requestedId)
+          const requestedArticle = requestedId
+            ? articles.find((item) => item.articleId === requestedId)
+            : null;
+          const article = requestedArticle
             || articles.find((item) => item.listOnHome !== false);
           if (!article) throw new Error("Article not found");
           const tag = (article.tags || []).find(
@@ -319,6 +344,26 @@
           title.textContent = article.title;
           document.title = `${article.title}｜FOOT VOX`;
           metaDescription.content = article.description;
+          const canonicalUrl = new URL(
+            `article.html?id=${encodeURIComponent(article.articleId)}`,
+            siteBaseUrl
+          ).href;
+          const socialImageUrl = new URL(article.image.src, siteBaseUrl).href;
+          const isIndexable = Boolean(requestedArticle) && article.indexable !== false;
+
+          metaRobots.content = isIndexable ? "index, follow" : "noindex, follow";
+          if (requestedArticle) {
+            canonical.href = canonicalUrl;
+          } else {
+            canonical.removeAttribute("href");
+          }
+          ogTitle.content = article.title;
+          ogDescription.content = article.description;
+          ogImage.content = socialImageUrl;
+          ogUrl.content = requestedArticle ? canonicalUrl : "";
+          twitterTitle.content = article.title;
+          twitterDescription.content = article.description;
+          twitterImage.content = socialImageUrl;
           summary.textContent = article.description;
           category.textContent = article.category;
           secondaryTag.textContent = tag;
