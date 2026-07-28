@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">記者会見場</title>
+  <desc id="desc">FOOT VOX静的プロトタイプ用の抽象的な仮画像</desc>
+  <rect width="1200" height="675" fill="#dce2db"/>
+  <rect x="0" y="0" width="1200" height="430" fill="#293638"/>
+  <g fill="#91a466">
+    <rect x="80" y="70" width="180" height="70" rx="8"/><rect x="290" y="70" width="180" height="70" rx="8"/>
+    <rect x="500" y="70" width="180" height="70" rx="8"/><rect x="710" y="70" width="180" height="70" rx="8"/>
+    <rect x="920" y="70" width="180" height="70" rx="8"/>
+  </g>
+  <g fill="#f0f1e8" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">
+    <text x="170" y="114">FOOT</text><text x="380" y="114">VOX</text><text x="590" y="114">MATCH</text>
+    <text x="800" y="114">REPORT</text><text x="1010" y="114">EUROPE</text>
+  </g>
+  <rect x="330" y="270" width="540" height="230" rx="10" fill="#f4f3ec"/>
+  <rect x="570" y="205" width="60" height="125" rx="30" fill="#121a1d"/>
+  <circle cx="600" cy="215" r="34" fill="#a9bc72"/>
+  <path d="M450 500L400 675H800L750 500Z" fill="#8d986c"/>
+  <text x="600" y="420" fill="#263033" font-family="Arial, sans-serif" font-size="54" font-weight="800" text-anchor="middle">POST MATCH</text>
+</svg>

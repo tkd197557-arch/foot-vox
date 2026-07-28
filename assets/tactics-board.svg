@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">戦術ボード</title>
+  <desc id="desc">FOOT VOX静的プロトタイプ用の抽象的な仮画像</desc>
+  <rect width="1200" height="675" fill="#17211f"/>
+  <rect x="100" y="70" width="1000" height="535" rx="18" fill="#455c3b" stroke="#d9dfcf" stroke-width="8"/>
+  <path d="M600 70V605M100 337H1100" stroke="#d9dfcf" stroke-width="6" opacity=".85"/>
+  <circle cx="600" cy="337" r="95" fill="none" stroke="#d9dfcf" stroke-width="6" opacity=".85"/>
+  <rect x="100" y="185" width="150" height="305" fill="none" stroke="#d9dfcf" stroke-width="6" opacity=".85"/>
+  <rect x="950" y="185" width="150" height="305" fill="none" stroke="#d9dfcf" stroke-width="6" opacity=".85"/>
+  <g fill="#d8a850">
+    <circle cx="300" cy="220" r="24"/><circle cx="430" cy="315" r="24"/><circle cx="320" cy="455" r="24"/>
+    <circle cx="565" cy="260" r="24"/><circle cx="540" cy="430" r="24"/>
+  </g>
+  <g fill="#d7e4c2">
+    <circle cx="900" cy="220" r="24"/><circle cx="770" cy="315" r="24"/><circle cx="880" cy="455" r="24"/>
+    <circle cx="650" cy="250" r="24"/><circle cx="680" cy="430" r="24"/>
+  </g>
+  <g stroke="#f0d88f" stroke-width="9" fill="none" stroke-linecap="round">
+    <path d="M320 220C410 160 500 185 555 245"/>
+    <path d="M450 320C520 350 585 355 650 315"/>
+    <path d="M555 430C630 480 750 500 855 455"/>
+  </g>
+</svg>

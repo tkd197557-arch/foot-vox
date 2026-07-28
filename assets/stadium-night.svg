@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">夜のサッカースタジアム</title>
+  <desc id="desc">FOOT VOX静的プロトタイプ用の抽象的な仮画像</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#101923"/>
+      <stop offset="1" stop-color="#253b3a"/>
+    </linearGradient>
+    <linearGradient id="pitch" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#536a36"/>
+      <stop offset="1" stop-color="#263c2f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#sky)"/>
+  <circle cx="180" cy="120" r="12" fill="#d9e6c2"/>
+  <circle cx="1020" cy="100" r="12" fill="#d9e6c2"/>
+  <path d="M0 280L190 225 380 280 570 220 760 275 965 215 1200 280V480H0Z" fill="#11191e"/>
+  <g fill="#c6d7a9" opacity=".65">
+    <circle cx="100" cy="330" r="5"/><circle cx="180" cy="345" r="5"/><circle cx="280" cy="315" r="5"/>
+    <circle cx="390" cy="350" r="5"/><circle cx="510" cy="318" r="5"/><circle cx="620" cy="348" r="5"/>
+    <circle cx="745" cy="320" r="5"/><circle cx="860" cy="350" r="5"/><circle cx="985" cy="315" r="5"/>
+    <circle cx="1100" cy="345" r="5"/>
+  </g>
+  <path d="M95 675L255 420H945L1105 675Z" fill="url(#pitch)"/>
+  <path d="M600 420V675M255 520H945M450 420L380 675M750 420L820 675" stroke="#dce5d7" stroke-width="4" opacity=".8"/>
+  <circle cx="600" cy="545" r="58" fill="none" stroke="#dce5d7" stroke-width="4" opacity=".8"/>
+  <text x="600" y="610" fill="#eef3e5" font-family="Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle" letter-spacing="8">FOOT VOX</text>
+</svg>
