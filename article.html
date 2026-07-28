@@ -76,15 +76,6 @@
 
           <div class="article-content-block" data-content-block data-block-type="text" data-text-role="reactions-start">
             <h2 class="section-title">海外の反応</h2>
-            <div class="reactions" aria-label="海外の反応">
-              <p class="reaction"><span class="reaction__meta">1・ホームサポ</span>あの時間帯でまだ加速できるなんて信じられない。最初の一歩で相手を完全に置き去りにした。</p>
-              <p class="reaction"><span class="reaction__meta">2・ロンドン</span>最初のタッチで勝負が決まった。折り返しも味方が触るだけの完璧なボールだった。</p>
-              <p class="reaction"><span class="reaction__meta">3・現地記者</span>目立たない時間も守備の位置取りが素晴らしい。得点場面だけで評価すべき選手ではない。</p>
-              <p class="reaction"><span class="reaction__meta">4・アウェイサポ</span>彼を自由にしすぎた。疲れているはずなのに判断の速度が落ちなかった。</p>
-              <p class="reaction"><span class="reaction__meta">5・北スタンド</span>今季最高の補強だと思う。毎週のようにチームが必要とする仕事をしている。</p>
-              <p class="reaction"><span class="reaction__meta">6・古参ファン</span>派手ではないが、ボールがないところでチームを前へ動かしている。</p>
-              <p class="reaction"><span class="reaction__meta">7・分析アカウント</span>後半だけでファイナルサードへの侵入が7回。右と中央の両方で出口になった。</p>
-            </div>
           </div>
 
           <div class="article-content-block" data-content-block data-block-type="gif" hidden>
@@ -97,13 +88,6 @@
 
           <div class="article-content-block" data-content-block data-block-type="text" data-text-role="reactions-end">
             <div class="reactions reactions--continued" aria-label="海外の反応 続き">
-              <p class="reaction"><span class="reaction__meta">8・中立ファン</span>このプレーは何度でも見たくなる。スタジアムの音が一気に変わった。</p>
-              <p id="reaction-9" class="reaction"><span class="reaction__meta">9・シーズンチケット</span>ここがトップページのContinueから到達する続き。最後まで諦めない姿勢が決勝点を生んだ。</p>
-              <p class="reaction"><span class="reaction__meta">10・南スタンド</span>ゴール後に真っ先にパスを出した選手を指さしたのも良かった。</p>
-              <p class="reaction"><span class="reaction__meta">11・現地解説</span>相手の交代直後にできたスペースを理解し、そこへ走り込んだ判断が大きい。</p>
-              <p class="reaction"><span class="reaction__meta">12・若手ファン</span>ユニフォームを買う選手が決まった。次のホームゲームが楽しみだ。</p>
-              <p class="reaction"><span class="reaction__meta">13・データ担当</span>90分間でスプリント22回。終盤の一本が最も速かった。</p>
-              <p class="reaction"><span class="reaction__meta">14・海外フォーラム</span>異なるリーグから来て、これほど早くチームのリズムに馴染むとは思わなかった。</p>
             </div>
           </div>
         </div>
@@ -260,6 +244,13 @@
           } : {})
         }))
       );
+      const freezeReactions = (reactions) => Object.freeze(
+        (Array.isArray(reactions) ? reactions : []).map((reaction) => Object.freeze({
+          number: Number(reaction.number),
+          name: String(reaction.name || "").trim(),
+          text: String(reaction.text || "").trim()
+        }))
+      );
       const freezeArticleData = (data) => Object.freeze({
         articleId: data.articleId,
         title: data.title,
@@ -267,6 +258,7 @@
         tags: Object.freeze([...data.tags]),
         publishedDate: data.publishedDate,
         updatedDate: data.updatedDate,
+        reactions: freezeReactions(data.reactions),
         contentBlocks: freezeContentBlocks(data.contentBlocks)
       });
       const formatJapaneseDate = (date) => {
@@ -506,9 +498,7 @@
           .map(normalizeHtmlBlockType);
         const dataBlockTypes = articleData.contentBlocks.map((block) => block.type);
         const htmlReactionCount = articleElement.querySelectorAll(".reaction").length;
-        const dataReactionCount = articleData.contentBlocks
-          .filter((block) => block.type === "reactions")
-          .reduce((count, block) => count + (Array.isArray(block.items) ? block.items.length : 0), 0);
+        const dataReactionCount = articleData.reactions.length;
         const checks = Object.freeze({
           articleId: articleData.articleId === articleElement.dataset.articleId,
           title: articleData.title === document.querySelector("#article-title")?.textContent.trim(),
@@ -586,6 +576,7 @@
         get tags() { return this.articleData.tags; },
         get publishedDate() { return this.articleData.publishedDate; },
         get updatedDate() { return this.articleData.updatedDate; },
+        get reactions() { return this.articleData.reactions; },
         get contentBlocks() { return this.articleData.contentBlocks; },
         get contentBlocksLoaded() { return this.contentBlocksStatus === "loaded"; },
         compareWithHtml(articleData = this.articleData) {
@@ -777,16 +768,19 @@
             articleContext.summaryPreviewStatus = "missing";
           }
 
-          const loadedReactionGroups = freezeReactionGroups(
-            articleContext.contentBlocks
-              .filter((block) => block.type === "reactions")
-              .map((block) => Array.isArray(block.items) ? block.items : [])
-          );
+          const loadedReactionGroups = freezeReactionGroups([
+            articleContext.reactions
+          ]);
           const reactionDataValid = loadedReactionGroups.length === reactionContainers.length
-            && loadedReactionGroups.flat().length === existingReactionGroups.flat().length
+            && loadedReactionGroups.flat().length === 14
             && loadedReactionGroups.flat().every(
-              (item) => Number.isInteger(item.number) && item.number > 0 && item.name && item.text
-            );
+              (item, index) => (
+                item.number === index + 1
+                && item.name
+                && item.text
+              )
+            )
+            && loadedReactionGroups[0][8]?.number === 9;
 
           if (reactionDataValid) {
             const matchesBeforeRender = reactionGroupsMatch(
@@ -810,6 +804,11 @@
             articleContext.reactionsRenderStatus = matchesBeforeRender
               ? "rendered-matched"
               : "rendered-from-json";
+            if (window.location.hash === "#reaction-9") {
+              requestAnimationFrame(() => {
+                document.querySelector("#reaction-9")?.scrollIntoView();
+              });
+            }
           } else {
             articleContext.reactionsRenderStatus = "fallback-invalid-reactions";
           }
