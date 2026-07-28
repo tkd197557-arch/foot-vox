@@ -69,7 +69,6 @@ body::before {
   );
 }
 
-.prototype-note,
 .site-header,
 .site-grid,
 .site-footer {
@@ -96,17 +95,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.prototype-note {
-  width: var(--page-width);
-  margin: 0 auto;
-  padding: 10px 0 8px;
-  color: #8fa09c;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .18em;
-  text-transform: uppercase;
 }
 
 .site-header {
@@ -917,16 +905,6 @@ img {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-  }
-
-  .prototype-note {
-    width: 100%;
-    padding: 8px 16px 7px;
-    font-size: 9px;
-    line-height: 1.5;
-    letter-spacing: .12em;
-    text-align: center;
-    overflow-wrap: anywhere;
   }
 
   .site-header__inner {
