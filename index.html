@@ -17,7 +17,7 @@
   <meta name="twitter:image" content="https://tkd197557-arch.github.io/foot-vox/assets/foot-vox-stadium-background.png">
   <title>FOOT VOX｜サッカー海外の反応</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260730">
 </head>
 <body id="page-top">
   <!-- PROTOTYPE: Editorial direction selected for design refinement. -->
@@ -37,7 +37,7 @@
 
       <h1 id="latest-heading" class="page-heading"><span>Latest dispatches</span>海外サッカー 最新の反応</h1>
 
-      <!-- Repeat one complete data-article-card block for each article. Video/GIF availability is metadata only; listing cards render image media only. -->
+      <!-- Repeat one complete data-article-card block for each article. The ordered article stream stops after eight reactions. -->
       <div class="feed" data-article-list data-page-size="6" data-source="data/articles.json" data-record-key="articleId">
         <article class="article-card" data-article-card hidden>
           <div class="article-card__inner" data-article-card-content>
@@ -51,7 +51,7 @@
               <img width="1200" height="675" alt="">
               <figcaption></figcaption>
             </figure>
-            <div class="reactions" data-card-field="reactions" aria-label="海外の反応"></div>
+            <div class="article-body article-stream article-stream--listing" data-card-field="stream"></div>
             <div class="continue-row" data-card-field="article-link"><a class="continue-link" href="">続きを読む</a></div>
             <div class="article-meta" data-card-field="meta">
               <span></span><span></span><span></span>
@@ -156,8 +156,10 @@
     </div>
   </footer>
 
+  <script src="scripts/article-renderer.js?v=20260730"></script>
   <script>
     (() => {
+      const { renderArticle } = window.FootVoxArticleRenderer;
       const articleListElement = document.querySelector("[data-article-list]");
       const searchEmptyElement = articleListElement?.querySelector("[data-search-empty]") || null;
       const searchFormElement = document.querySelector("[data-article-search]");
@@ -254,7 +256,7 @@
         const summaryText = generatedCard.querySelector('[data-card-field="summary"] p');
         const listingImage = generatedCard.querySelector('[data-card-field="image"] img');
         const listingCaption = generatedCard.querySelector('[data-card-field="image"] figcaption');
-        const reactionContainer = generatedCard.querySelector('[data-card-field="reactions"]');
+        const streamContainer = generatedCard.querySelector('[data-card-field="stream"]');
         const metaFields = generatedCard.querySelectorAll('[data-card-field="meta"] span');
         const continueLink = generatedCard.querySelector(".continue-link");
         const secondaryTag = article.tags.find(
@@ -270,7 +272,11 @@
         generatedCard.setAttribute("data-updated-date", article.updatedDate);
         generatedCard.setAttribute(
           "data-has-video",
-          String(article.contentBlocks?.some((block) => block.type === "video") || false)
+          String(
+            article.contentBlocks?.some(
+              (block) => block.type === "video" || block.type === "xEmbed"
+            ) || false
+          )
         );
         generatedCard.setAttribute(
           "data-has-gif",
@@ -301,18 +307,14 @@
         if (listingCaption) {
           listingCaption.textContent = article.image.caption;
         }
-        if (reactionContainer) {
-          const reactionElements = listingReactions.map((reactionData) => {
-            const reaction = document.createElement("p");
-            const reactionMeta = document.createElement("span");
-
-            reaction.className = "reaction";
-            reactionMeta.className = "reaction__meta";
-            reactionMeta.textContent = reactionData.name;
-            reaction.append(reactionMeta, document.createTextNode(reactionData.text));
-            return reaction;
+        if (streamContainer) {
+          renderArticle(article, {
+            body: {
+              container: streamContainer,
+              maxReactions: 8,
+              includeReactionIds: false
+            }
           });
-          reactionContainer.replaceChildren(...reactionElements);
         }
         if (continueLink) {
           continueLink.setAttribute("href", `${articleUrl}#reaction-9`);
@@ -400,15 +402,17 @@
           '[data-card-field="title"]',
           '[data-card-field="summary"]',
           '[data-card-field="image"]',
-          '[data-card-field="reactions"]',
+          '[data-card-field="stream"]',
           '[data-card-field="article-link"]',
           '[data-card-field="meta"]'
         ];
         const existingLinks = existingCard
-          ? [...existingCard.querySelectorAll("a")]
+          ? [...existingCard.querySelectorAll('[data-card-field="title"] a, .continue-link')]
             .map((link) => link.getAttribute("href"))
           : [];
-        const generatedLinks = [...generatedCard.querySelectorAll("a")]
+        const generatedLinks = [...generatedCard.querySelectorAll(
+          '[data-card-field="title"] a, .continue-link'
+        )]
           .map((link) => link.getAttribute("href"));
         const existingTitle = existingCard?.querySelector('[data-card-field="title"] a')?.textContent || "";
         const generatedTitle = generatedCard.querySelector('[data-card-field="title"] a')?.textContent || "";
@@ -997,7 +1001,7 @@
         }
       };
 
-      articleListContext.ready = fetch("data/articles.json")
+      articleListContext.ready = fetch("data/articles.json?v=20260730", { cache: "no-store" })
         .then((response) => {
           if (!response.ok) {
             throw new Error(`Article list request failed: ${response.status}`);
