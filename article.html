@@ -67,7 +67,7 @@
           </div>
 
           <div class="article-content-block" data-content-block data-block-type="text" data-text-role="source">
-            <p class="source-link">原文：<a href="" rel="noopener noreferrer"></a></p>
+            <p class="source-link">原文：<span class="source-list" data-source-list></span></p>
           </div>
 
           <!-- Future inline ad code may be inserted into this container. -->
@@ -232,7 +232,7 @@
       const image = document.querySelector("[data-article-image]");
       const caption = document.querySelector("[data-article-image-caption]");
       const sourceBlock = document.querySelector('[data-text-role="source"]');
-      const sourceLink = sourceBlock?.querySelector("a");
+      const sourceList = sourceBlock?.querySelector("[data-source-list]");
       const published = document.querySelector("[data-article-published-date]");
       const updated = document.querySelector("[data-article-updated-date]");
       const tags = document.querySelector("[data-article-tags]");
@@ -399,14 +399,38 @@
           published.textContent = `公開日：${formatDate(article.publishedDate)}`;
           updated.textContent = `更新日：${formatDate(article.updatedDate)}`;
           tags.textContent = `タグ：${article.tags.join("／")}`;
-          const source = (article.contentBlocks || []).find(
-            (block) => block.type === "text" && block.role === "source"
+          const sources = (article.contentBlocks || []).filter(
+            (block) => (
+              block?.type === "source"
+              || (block?.type === "text" && block?.role === "source")
+            ) && typeof block.text === "string" && block.text.trim()
           );
-          sourceBlock.hidden = !source;
-          if (source) {
-            sourceLink.textContent = source.text;
-            sourceLink.href = source.href;
-          }
+          sourceBlock.hidden = sources.length === 0;
+          sourceList.replaceChildren(...sources.map((source) => {
+            const item = document.createElement("span");
+            item.className = "source-list__item";
+            let safeHref = "";
+            if (typeof source.href === "string" && source.href.trim()) {
+              try {
+                const sourceUrl = new URL(source.href);
+                if (sourceUrl.protocol === "http:" || sourceUrl.protocol === "https:") {
+                  safeHref = sourceUrl.href;
+                }
+              } catch {
+                safeHref = "";
+              }
+            }
+            if (safeHref) {
+              const link = document.createElement("a");
+              link.textContent = source.text.trim();
+              link.href = safeHref;
+              link.rel = "noopener noreferrer";
+              item.append(link);
+            } else {
+              item.textContent = source.text.trim();
+            }
+            return item;
+          }));
           const video = (article.contentBlocks || []).find((block) => block.type === "video");
           const gif = (article.contentBlocks || []).find((block) => block.type === "gif");
           videoBlock.hidden = !video?.embedUrl;

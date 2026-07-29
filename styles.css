@@ -647,6 +647,22 @@ img {
 .source-link {
   margin: -3px 0 22px;
   font-size: 13px;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: start;
+  column-gap: 4px;
+}
+
+.source-list {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.source-list__item,
+.source-list__item a {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .section-title {
