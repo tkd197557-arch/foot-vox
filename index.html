@@ -38,7 +38,7 @@
       <h1 id="latest-heading" class="page-heading"><span>Latest dispatches</span>海外サッカー 最新の反応</h1>
 
       <!-- Repeat one complete data-article-card block for each article. Video/GIF availability is metadata only; listing cards render image media only. -->
-      <div class="feed" data-article-list data-page-size="5" data-source="data/articles.json" data-record-key="articleId">
+      <div class="feed" data-article-list data-page-size="6" data-source="data/articles.json" data-record-key="articleId">
         <article class="article-card" data-article-card hidden>
           <div class="article-card__inner" data-article-card-content>
             <div class="eyebrow" data-card-field="taxonomy">
@@ -182,9 +182,48 @@
           document.querySelector(`[data-sidebar-section="${key}"]`)
         ))
       );
+      const MAX_HOME_ARTICLES = 6;
+      const MAX_RECENT_ARTICLES = 7;
       const formatJapaneseDate = (date) => {
         const [year, month, day] = String(date).split("-").map(Number);
         return year && month && day ? `${year}年${month}月${day}日` : String(date);
+      };
+      const dateValue = (date) => {
+        const value = Date.parse(`${String(date || "")}T00:00:00Z`);
+        return Number.isFinite(value) ? value : 0;
+      };
+      const compareArticlesByUpdatedDate = (left, right) => (
+        dateValue(right.updatedDate) - dateValue(left.updatedDate)
+        || String(left.articleId || "").localeCompare(String(right.articleId || ""))
+      );
+      const getSearchableArticles = (articles) => Object.freeze(
+        articles
+          .filter((article) => article.listOnHome !== false)
+          .sort(compareArticlesByUpdatedDate)
+      );
+      const getLatestArticles = (articles) => Object.freeze(
+        [...articles].slice(0, MAX_HOME_ARTICLES)
+      );
+      const createSidebarData = (sidebarConfig, articles) => {
+        if (!sidebarConfig) {
+          return null;
+        }
+
+        const recentArticles = articles
+          .filter((article) => article.listOnHome !== false)
+          .sort(compareArticlesByUpdatedDate)
+          .slice(0, MAX_RECENT_ARTICLES)
+          .map((article) => Object.freeze({
+            articleId: article.articleId,
+            thumbnail: article.image?.src || "",
+            title: article.title,
+            href: `article.html?id=${encodeURIComponent(article.articleId)}`
+          }));
+
+        return Object.freeze({
+          ...sidebarConfig,
+          recentArticles: Object.freeze(recentArticles)
+        });
       };
       const findExistingCard = (articleId) => (
         cardElements.find((card) => card.dataset.articleId === articleId) || null
@@ -469,7 +508,12 @@
         const recentSection = generatedSections[0];
         const popularSection = generatedSections[1];
         const taxonomySection = generatedSections[2];
-        const recentItems = [...recentSection.querySelectorAll("[data-sidebar-item]")];
+        const recentList = recentSection.querySelector('[data-sidebar-list="recent-articles"]');
+        const recentItemTemplate = recentList?.querySelector("[data-sidebar-item]") || null;
+        const recentItems = recentItemTemplate
+          ? sidebarData.recentArticles.map(() => recentItemTemplate.cloneNode(true))
+          : [];
+        recentList?.replaceChildren(...recentItems);
         const popularItems = [...popularSection.querySelectorAll("[data-sidebar-item]")];
         const categoryItems = [...taxonomySection.querySelectorAll(
           '[data-taxonomy-item][data-taxonomy-type="category"]'
@@ -477,7 +521,9 @@
         const playerGroups = [...taxonomySection.querySelectorAll("[data-kana-group]")];
 
         if (
-          recentItems.length !== sidebarData.recentArticles.length
+          !recentList
+          || !recentItemTemplate
+          || recentItems.length !== sidebarData.recentArticles.length
           || popularItems.length !== sidebarData.popularArticles.length
           || categoryItems.length !== sidebarData.taxonomy.categories.length
           || playerGroups.length !== sidebarData.taxonomy.playerGroups.length
@@ -827,6 +873,7 @@
         comparisonError: null,
         allArticles: Object.freeze([]),
         articles: Object.freeze([]),
+        latestArticles: Object.freeze([]),
         cardIds,
         cardMatches: Object.freeze([]),
         generatedCards: Object.freeze([]),
@@ -911,7 +958,9 @@
         }
 
         const normalizedQuery = normalizeSearchText(query);
-        const matches = findSearchMatches(articleListContext.articles, normalizedQuery);
+        const matches = normalizedQuery
+          ? findSearchMatches(articleListContext.articles, normalizedQuery)
+          : [...articleListContext.latestArticles];
         const rendered = renderArticleSelection(matches);
 
         if (!rendered) {
@@ -960,17 +1009,17 @@
           const frozenArticles = Object.freeze(
             articles.map((article) => Object.freeze({ ...article }))
           );
-          const listArticles = Object.freeze(
-            frozenArticles.filter((article) => article.listOnHome !== false)
-          );
+          const searchableArticles = getSearchableArticles([...frozenArticles]);
+          const listArticles = getLatestArticles(searchableArticles);
           const availableArticleIds = new Set(
             frozenArticles.map((article) => article.articleId).filter(Boolean)
           );
           const articleIds = new Set(listArticles.map((article) => article.articleId));
           const cardIdSet = new Set(cardIds);
-          const sidebarData = payload.homeSidebar || null;
+          const sidebarData = createSidebarData(payload.homeSidebar || null, [...frozenArticles]);
           articleListContext.allArticles = frozenArticles;
-          articleListContext.articles = listArticles;
+          articleListContext.articles = searchableArticles;
+          articleListContext.latestArticles = listArticles;
           articleListContext.sidebarData = sidebarData;
           articleListContext.cardMatches = Object.freeze(
             cardIds.map((articleId) => Object.freeze({

@@ -242,12 +242,30 @@
       const gifBlock = document.querySelector('[data-block-type="gif"]');
       const requestedId = new URLSearchParams(location.search).get("id");
       const siteBaseUrl = "https://tkd197557-arch.github.io/foot-vox/";
+      const MAX_RECENT_ARTICLES = 7;
       const formatDate = (value) => {
         const [year, month, day] = String(value || "").split("-").map(Number);
         return year && month && day ? `${year}年${month}月${day}日` : "";
       };
       const dateValue = (value) => Date.parse(`${value || ""}T00:00:00Z`) || 0;
       const articleHref = (id) => `article.html?id=${encodeURIComponent(id)}`;
+      const compareArticlesByUpdatedDate = (left, right) => (
+        dateValue(right.updatedDate) - dateValue(left.updatedDate)
+        || String(left.articleId || "").localeCompare(String(right.articleId || ""))
+      );
+      const createSidebarData = (sidebarConfig, articles) => ({
+        ...sidebarConfig,
+        recentArticles: articles
+          .filter((article) => article.listOnHome !== false)
+          .sort(compareArticlesByUpdatedDate)
+          .slice(0, MAX_RECENT_ARTICLES)
+          .map((article) => ({
+            articleId: article.articleId,
+            thumbnail: article.image?.src || "",
+            title: article.title,
+            href: articleHref(article.articleId)
+          }))
+      });
       const selectRelatedArticles = (articles, current) => {
         const currentTags = new Set(current.tags || []);
         const candidates = articles
@@ -278,7 +296,13 @@
       };
       const fillSidebar = (sidebar, articles) => {
         const ids = new Set(articles.map((article) => article.articleId));
-        document.querySelectorAll('[data-sidebar-list="recent-articles"] [data-sidebar-item]')
+        const recentList = document.querySelector('[data-sidebar-list="recent-articles"]');
+        const recentTemplate = recentList?.querySelector("[data-sidebar-item]") || null;
+        const recentItems = recentTemplate
+          ? sidebar.recentArticles.map(() => recentTemplate.cloneNode(true))
+          : [];
+        recentList?.replaceChildren(...recentItems);
+        recentItems
           .forEach((item, index) => {
             const data = sidebar.recentArticles[index];
             const link = item.querySelector("a");
@@ -407,7 +431,7 @@
             li.append(link);
             return li;
           }));
-          fillSidebar(payload.homeSidebar, articles);
+          fillSidebar(createSidebarData(payload.homeSidebar, [...articles]), articles);
           context.articleData = article;
           context.relatedArticles = related;
           context.loadStatus = "loaded";

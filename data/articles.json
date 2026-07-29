@@ -1,49 +1,5 @@
 {
   "homeSidebar": {
-    "recentArticles": [
-      {
-        "articleId": "japan-midfielder-final-assist",
-        "href": "article.html",
-        "thumbnail": "assets/stadium-night.svg",
-        "title": "日本人MFの決勝アシストに現地サポーターが熱狂"
-      },
-      {
-        "articleId": "coach-halftime-adjustment",
-        "href": "article.html",
-        "thumbnail": "assets/press-room.svg",
-        "title": "指揮官が明かした後半の修正を現地紙が評価"
-      },
-      {
-        "articleId": "three-back-young-defender",
-        "href": "article.html",
-        "thumbnail": "assets/tactics-board.svg",
-        "title": "3バック変更で際立った若手DFの判断"
-      },
-      {
-        "articleId": "goalkeeper-clean-sheet",
-        "href": "article.html",
-        "thumbnail": "assets/stadium-night.svg",
-        "title": "守護神の連続セーブで勝点1を確保"
-      },
-      {
-        "articleId": "european-final-preview",
-        "href": "article.html",
-        "thumbnail": "assets/tactics-board.svg",
-        "title": "欧州決戦で注目されるサイドの攻防"
-      },
-      {
-        "articleId": "captain-trusts-young-player",
-        "href": "article.html",
-        "thumbnail": "assets/press-room.svg",
-        "title": "主将が語った若手選手への信頼"
-      },
-      {
-        "articleId": "derby-stadium-report",
-        "href": "article.html",
-        "thumbnail": "assets/stadium-night.svg",
-        "title": "ダービー前日の現地スタジアムから"
-      }
-    ],
     "popularArticles": [
       {
         "articleId": "japan-midfielder-final-assist",

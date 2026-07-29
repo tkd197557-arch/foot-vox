@@ -2,88 +2,39 @@
   "articleId": "new-article-id",
   "listOnHome": true,
   "relatedEligible": true,
-  "title": "記事タイトルを入力",
-  "category": "カテゴリー名を入力",
+  "indexable": true,
+  "title": "記事タイトル",
+  "category": "カテゴリー名",
   "tags": [
     "主要タグ",
     "補助タグ",
     "海外の反応"
   ],
-  "publishedDate": "2026-01-01",
-  "updatedDate": "2026-01-01",
-  "listing": {
-    "summary": "トップページの記事カードに表示する短い要約を入力します。",
-    "image": {
-      "src": "assets/example-image.svg",
-      "alt": "画像の内容を説明する代替テキスト",
-      "caption": "画像のキャプション"
-    },
-    "reactions": [
-      { "name": "投稿者1", "text": "トップページに表示するコメント1。" },
-      { "name": "投稿者2", "text": "トップページに表示するコメント2。" },
-      { "name": "投稿者3", "text": "トップページに表示するコメント3。" },
-      { "name": "投稿者4", "text": "トップページに表示するコメント4。" },
-      { "name": "投稿者5", "text": "トップページに表示するコメント5。" },
-      { "name": "投稿者6", "text": "トップページに表示するコメント6。" },
-      { "name": "投稿者7", "text": "トップページに表示するコメント7。" },
-      { "name": "投稿者8", "text": "トップページに表示するコメント8。" }
-    ]
+  "publishedDate": "YYYY-MM-DD",
+  "updatedDate": "YYYY-MM-DD",
+  "description": "トップページ、個別記事、SEOに使用する記事概要",
+  "image": {
+    "src": "assets/articles/new-article-id.jpg",
+    "alt": "画像の内容を説明する代替テキスト",
+    "caption": "画像の説明・出典"
   },
+  "reactions": [
+    { "number": 1, "name": "投稿者名", "text": "コメント本文" },
+    { "number": 2, "name": "投稿者名", "text": "コメント本文" },
+    { "number": 3, "name": "投稿者名", "text": "コメント本文" },
+    { "number": 4, "name": "投稿者名", "text": "コメント本文" },
+    { "number": 5, "name": "投稿者名", "text": "コメント本文" },
+    { "number": 6, "name": "投稿者名", "text": "コメント本文" },
+    { "number": 7, "name": "投稿者名", "text": "コメント本文" },
+    { "number": 8, "name": "投稿者名", "text": "コメント本文" },
+    { "number": 9, "name": "投稿者名", "text": "コメント本文" }
+  ],
   "contentBlocks": [
     {
       "type": "text",
-      "role": "summary",
-      "text": "個別記事ページのsummary-boxに表示する概要を入力します。"
-    },
-    {
-      "type": "image",
-      "src": "assets/example-image.svg",
-      "alt": "記事画像の内容を説明する代替テキスト",
-      "caption": "記事画像のキャプション"
-    },
-    {
-      "type": "text",
       "role": "source",
-      "text": "出典名またはリンクテキスト",
+      "text": "出典名",
       "href": "https://example.com/source"
-    },
-    {
-      "type": "video",
-      "provider": null,
-      "embedUrl": null,
-      "title": "動画未設定",
-      "hideWhenUnset": true
-    },
-    {
-      "type": "reactions",
-      "items": [
-        { "number": 1, "name": "投稿者1", "text": "海外の反応コメント1。" },
-        { "number": 2, "name": "投稿者2", "text": "海外の反応コメント2。" },
-        { "number": 3, "name": "投稿者3", "text": "海外の反応コメント3。" },
-        { "number": 4, "name": "投稿者4", "text": "海外の反応コメント4。" },
-        { "number": 5, "name": "投稿者5", "text": "海外の反応コメント5。" },
-        { "number": 6, "name": "投稿者6", "text": "海外の反応コメント6。" },
-        { "number": 7, "name": "投稿者7", "text": "海外の反応コメント7。" }
-      ]
-    },
-    {
-      "type": "gif",
-      "src": null,
-      "alt": "",
-      "caption": null,
-      "hideWhenUnset": true
-    },
-    {
-      "type": "reactions",
-      "items": [
-        { "number": 8, "name": "投稿者8", "text": "海外の反応コメント8。" },
-        { "number": 9, "name": "投稿者9", "text": "海外の反応コメント9。" },
-        { "number": 10, "name": "投稿者10", "text": "海外の反応コメント10。" },
-        { "number": 11, "name": "投稿者11", "text": "海外の反応コメント11。" },
-        { "number": 12, "name": "投稿者12", "text": "海外の反応コメント12。" },
-        { "number": 13, "name": "投稿者13", "text": "海外の反応コメント13。" },
-        { "number": 14, "name": "投稿者14", "text": "海外の反応コメント14。" }
-      ]
     }
   ]
 }
