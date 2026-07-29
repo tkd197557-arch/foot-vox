@@ -66,9 +66,7 @@
             </figure>
           </div>
 
-          <div class="article-content-block" data-content-block data-block-type="text" data-text-role="source">
-            <p class="source-link">原文：<span class="source-list" data-source-list></span></p>
-          </div>
+          <div class="article-body" data-article-body-before hidden></div>
 
           <!-- Future inline ad code may be inserted into this container. -->
           <div class="ad-slot" data-ad-slot="article-inline"></div>
@@ -99,6 +97,12 @@
           <div class="article-content-block" data-content-block data-block-type="text" data-text-role="reactions-end">
             <div class="reactions reactions--continued" aria-label="海外の反応 続き">
             </div>
+          </div>
+
+          <div class="article-body article-body--after" data-article-body-after hidden></div>
+
+          <div class="article-content-block" data-content-block data-block-type="text" data-text-role="source">
+            <p class="source-link">情報源：<span class="source-list" data-source-list></span></p>
           </div>
         </div>
 
@@ -231,6 +235,8 @@
       const breadcrumbTag = document.querySelector("[data-breadcrumb-tag]");
       const image = document.querySelector("[data-article-image]");
       const caption = document.querySelector("[data-article-image-caption]");
+      const articleBodyBefore = document.querySelector("[data-article-body-before]");
+      const articleBodyAfter = document.querySelector("[data-article-body-after]");
       const sourceBlock = document.querySelector('[data-text-role="source"]');
       const sourceList = sourceBlock?.querySelector("[data-source-list]");
       const published = document.querySelector("[data-article-published-date]");
@@ -249,6 +255,65 @@
       };
       const dateValue = (value) => Date.parse(`${value || ""}T00:00:00Z`) || 0;
       const articleHref = (id) => `article.html?id=${encodeURIComponent(id)}`;
+      const safeExternalUrl = (value) => {
+        if (typeof value !== "string" || !value.trim()) return "";
+        try {
+          const url = new URL(value);
+          return url.protocol === "http:" || url.protocol === "https:" ? url.href : "";
+        } catch {
+          return "";
+        }
+      };
+      const createArticleBodyBlock = (block) => {
+        if (!block || typeof block !== "object") return null;
+        if (block.type === "heading" && typeof block.text === "string") {
+          const heading = document.createElement("h2");
+          heading.className = "section-title article-body__heading";
+          heading.textContent = block.text;
+          return heading;
+        }
+        if ((block.type === "paragraph" || block.type === "note") && typeof block.text === "string") {
+          const paragraph = document.createElement("p");
+          paragraph.className = block.type === "note" ? "article-note" : "article-copy";
+          paragraph.textContent = block.text;
+          return paragraph;
+        }
+        if (block.type === "linkCard") {
+          const href = safeExternalUrl(block.href);
+          if (!href || typeof block.title !== "string") return null;
+          const link = document.createElement("a");
+          link.className = "article-link-card";
+          link.href = href;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          const cardTitle = document.createElement("strong");
+          cardTitle.className = "article-link-card__title";
+          cardTitle.textContent = block.title;
+          link.append(cardTitle);
+          if (typeof block.description === "string" && block.description.trim()) {
+            const description = document.createElement("span");
+            description.className = "article-link-card__description";
+            description.textContent = block.description;
+            link.append(description);
+          }
+          if (typeof block.source === "string" && block.source.trim()) {
+            const source = document.createElement("span");
+            source.className = "article-link-card__source";
+            source.textContent = block.source;
+            link.append(source);
+          }
+          return link;
+        }
+        return null;
+      };
+      const renderArticleBody = (blocks, placement, container) => {
+        const nodes = blocks
+          .filter((block) => block?.placement === placement)
+          .map(createArticleBodyBlock)
+          .filter(Boolean);
+        container.replaceChildren(...nodes);
+        container.hidden = nodes.length === 0;
+      };
       const compareArticlesByUpdatedDate = (left, right) => (
         dateValue(right.updatedDate) - dateValue(left.updatedDate)
         || String(left.articleId || "").localeCompare(String(right.articleId || ""))
@@ -366,7 +431,7 @@
           ) || article.tags?.[0] || "";
           detail.dataset.articleId = article.articleId;
           title.textContent = article.title;
-          document.title = `${article.title}｜FOOT VOX`;
+          document.title = `${article.seoTitle || article.title}｜FOOT VOX`;
           metaDescription.content = article.description;
           const canonicalUrl = new URL(
             `article.html?id=${encodeURIComponent(article.articleId)}`,
@@ -396,6 +461,8 @@
           image.src = article.image.src;
           image.alt = article.image.alt;
           caption.textContent = article.image.caption;
+          renderArticleBody(article.contentBlocks || [], "beforeReactions", articleBodyBefore);
+          renderArticleBody(article.contentBlocks || [], "afterReactions", articleBodyAfter);
           published.textContent = `公開日：${formatDate(article.publishedDate)}`;
           updated.textContent = `更新日：${formatDate(article.updatedDate)}`;
           tags.textContent = `タグ：${article.tags.join("／")}`;
@@ -409,21 +476,12 @@
           sourceList.replaceChildren(...sources.map((source) => {
             const item = document.createElement("span");
             item.className = "source-list__item";
-            let safeHref = "";
-            if (typeof source.href === "string" && source.href.trim()) {
-              try {
-                const sourceUrl = new URL(source.href);
-                if (sourceUrl.protocol === "http:" || sourceUrl.protocol === "https:") {
-                  safeHref = sourceUrl.href;
-                }
-              } catch {
-                safeHref = "";
-              }
-            }
+            const safeHref = safeExternalUrl(source.href);
             if (safeHref) {
               const link = document.createElement("a");
               link.textContent = source.text.trim();
               link.href = safeHref;
+              link.target = "_blank";
               link.rel = "noopener noreferrer";
               item.append(link);
             } else {
@@ -436,14 +494,34 @@
           videoBlock.hidden = !video?.embedUrl;
           gifBlock.hidden = !gif?.src;
           reactions.replaceChildren(...article.reactions.map((reaction) => {
-            const paragraph = document.createElement("p");
+            const item = document.createElement("article");
             const meta = document.createElement("span");
-            paragraph.className = "reaction";
-            paragraph.id = `reaction-${reaction.number}`;
+            const translation = document.createElement("p");
+            item.className = "reaction";
+            item.id = `reaction-${reaction.number}`;
             meta.className = "reaction__meta";
             meta.textContent = reaction.name;
-            paragraph.append(meta, document.createTextNode(reaction.text));
-            return paragraph;
+            translation.className = "reaction__translation";
+            translation.textContent = reaction.text;
+            item.append(meta, translation);
+            if (typeof reaction.originalText === "string" && reaction.originalText.trim()) {
+              const original = document.createElement("p");
+              original.className = "reaction__original";
+              original.lang = "en";
+              original.textContent = `原文：${reaction.originalText}`;
+              item.append(original);
+            }
+            const reactionHref = safeExternalUrl(reaction.sourceUrl);
+            if (reactionHref) {
+              const source = document.createElement("a");
+              source.className = "reaction__source";
+              source.href = reactionHref;
+              source.target = "_blank";
+              source.rel = "noopener noreferrer";
+              source.textContent = `出典：${reaction.platform || "元コメント"}`;
+              item.append(source);
+            }
+            return item;
           }));
           const related = selectRelatedArticles(articles, article);
           relatedList.replaceChildren(...related.map((item) => {

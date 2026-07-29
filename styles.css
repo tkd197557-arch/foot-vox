@@ -341,6 +341,30 @@ img {
   background: var(--olive);
 }
 
+.reaction__translation,
+.reaction__original {
+  margin: 0;
+}
+
+.reaction__original {
+  margin-top: 10px;
+  color: #52605f;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.reaction__source {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--olive-dark);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  text-underline-offset: 3px;
+}
+
 .continue-row {
   display: flex;
   justify-content: flex-end;
@@ -668,6 +692,76 @@ img {
 .source-list__item a {
   min-width: 0;
   overflow-wrap: anywhere;
+}
+
+.article-body {
+  display: grid;
+  gap: 18px;
+  margin: 8px 0 30px;
+}
+
+.article-body[hidden] {
+  display: none;
+}
+
+.article-body--after {
+  margin-top: 36px;
+}
+
+.article-body__heading {
+  margin-bottom: 0;
+}
+
+.article-copy,
+.article-note {
+  margin: 0;
+  color: #2f3939;
+  font-size: 18px;
+  line-height: 1.82;
+}
+
+.article-note {
+  padding: 14px 16px;
+  border-left: 4px solid var(--olive);
+  background: rgba(111, 143, 58, .08);
+  font-size: 15px;
+}
+
+.article-link-card {
+  display: grid;
+  gap: 8px;
+  padding: 18px 20px;
+  border: 1px solid rgba(69, 107, 126, .28);
+  border-left: 4px solid var(--olive);
+  border-radius: 4px;
+  background: #f8faf8;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+
+.article-link-card:hover,
+.article-link-card:focus-visible {
+  border-color: var(--olive);
+  background: #f2f7ed;
+}
+
+.article-link-card__title {
+  color: #172221;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.article-link-card__description {
+  color: #42504f;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.article-link-card__source {
+  color: var(--olive-dark);
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .section-title {
@@ -1030,6 +1124,23 @@ img {
 
   .reactions {
     gap: 32px;
+  }
+
+  .article-copy {
+    font-size: 17px;
+    line-height: 1.82;
+  }
+
+  .article-link-card {
+    padding: 16px;
+  }
+
+  .article-link-card__title {
+    font-size: 17px;
+  }
+
+  .article-link-card__description {
+    font-size: 14px;
   }
 
   img,
