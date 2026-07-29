@@ -1421,18 +1421,6 @@
           "end": 30
         },
         {
-          "type": "heading",
-          "text": "まとめ"
-        },
-        {
-          "type": "paragraph",
-          "text": "高井は左センターバックとして後半45分間を経験し、関根は新天地でTottenham相手にゴールを記録した。得点場面を皮肉る反応だけでなく、高井の落ち着きや左右両足の配球を評価する声もあった。プレシーズンの一試合で評価を確定する段階ではなく、今後の起用と適応が注目される。"
-        },
-        {
-          "type": "note",
-          "text": "海外の反応はRedditおよび公式X投稿への公開返信から、内容と個別URLを確認できたコメントを抜粋しています。"
-        },
-        {
           "type": "text",
           "role": "source",
           "text": "Tottenham Hotspur公式：Sydney FC戦の試合記事",
@@ -1461,7 +1449,10 @@
           "role": "source",
           "text": "Soccer King：関根貴大の得点と高井幸大の出場に関する試合記事",
           "href": "https://www.soccer-king.jp/news/world/eng/20260729/2188030.html"
-        },
+        }
+      ],
+      "auditNote": "海外の反応はRedditおよび公式X投稿への公開返信から、内容と個別URLを確認できたコメントを抜粋しています。",
+      "auditSources": [
         {
           "type": "text",
           "role": "source",
