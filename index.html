@@ -190,17 +190,9 @@
         const [year, month, day] = String(date).split("-").map(Number);
         return year && month && day ? `${year}年${month}月${day}日` : String(date);
       };
-      const dateValue = (date) => {
-        const value = Date.parse(`${String(date || "")}T00:00:00Z`);
-        return Number.isFinite(value) ? value : 0;
-      };
-      const compareArticlesByUpdatedDate = (left, right) => (
-        dateValue(right.updatedDate) - dateValue(left.updatedDate)
-      );
       const getSearchableArticles = (articles) => Object.freeze(
         articles
           .filter((article) => article.listOnHome !== false)
-          .sort(compareArticlesByUpdatedDate)
       );
       const getLatestArticles = (articles) => Object.freeze(
         [...articles].slice(0, MAX_HOME_ARTICLES)
@@ -212,7 +204,6 @@
 
         const recentArticles = articles
           .filter((article) => article.listOnHome !== false)
-          .sort(compareArticlesByUpdatedDate)
           .slice(0, MAX_RECENT_ARTICLES)
           .map((article) => Object.freeze({
             articleId: article.articleId,

@@ -221,17 +221,11 @@
         const [year, month, day] = String(value || "").split("-").map(Number);
         return year && month && day ? `${year}年${month}月${day}日` : "";
       };
-      const dateValue = (value) => Date.parse(`${value || ""}T00:00:00Z`) || 0;
       const articleHref = (id) => `article.html?id=${encodeURIComponent(id)}`;
-      const compareArticlesByUpdatedDate = (left, right) => (
-        dateValue(right.updatedDate) - dateValue(left.updatedDate)
-        || String(left.articleId || "").localeCompare(String(right.articleId || ""))
-      );
       const createSidebarData = (sidebarConfig, articles) => ({
         ...sidebarConfig,
         recentArticles: articles
           .filter((article) => article.listOnHome !== false)
-          .sort(compareArticlesByUpdatedDate)
           .slice(0, MAX_RECENT_ARTICLES)
           .map((article) => ({
             articleId: article.articleId,
@@ -252,18 +246,12 @@
           .filter((article) => article.commonTagCount > 0)
           .sort((left, right) => (
             right.commonTagCount - left.commonTagCount
-            || dateValue(right.updatedDate) - dateValue(left.updatedDate)
-            || left.articleId.localeCompare(right.articleId)
           ))
           .slice(0, 3);
         if (related.length < 3) {
           const selected = new Set(related.map((article) => article.articleId));
           related.push(...candidates
             .filter((article) => !selected.has(article.articleId))
-            .sort((left, right) => (
-              dateValue(right.updatedDate) - dateValue(left.updatedDate)
-              || left.articleId.localeCompare(right.articleId)
-            ))
             .slice(0, 3 - related.length));
         }
         return related;
