@@ -196,7 +196,6 @@
       };
       const compareArticlesByUpdatedDate = (left, right) => (
         dateValue(right.updatedDate) - dateValue(left.updatedDate)
-        || String(left.articleId || "").localeCompare(String(right.articleId || ""))
       );
       const getSearchableArticles = (articles) => Object.freeze(
         articles
