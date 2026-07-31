@@ -95,6 +95,511 @@
   },
   "articles": [
     {
+      "articleId": "franco-baresi-death-world-reactions",
+      "listOnHome": true,
+      "relatedEligible": true,
+      "indexable": true,
+      "title": "フランコ・バレージ氏死去、世界のファンが追悼　守備を芸術にした伝説",
+      "seoTitle": "フランコ・バレージ氏死去に世界のファンが追悼｜ACミラン伝説の背番号6",
+      "category": "海外サッカー",
+      "tags": [
+        "フランコ・バレージ",
+        "ACミラン",
+        "イタリア代表",
+        "追悼",
+        "海外の反応"
+      ],
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "description": "ACミランが元主将で名誉副会長のフランコ・バレージ氏の死去を発表。66歳だった。背番号6の象徴性、1994年W杯、歴代最高クラスのDFとしての評価を語る世界のファンの追悼を紹介する。",
+      "image": {
+        "src": "assets/articles/franco-baresi-death-world-reactions.jpg",
+        "alt": "赤黒のユニフォーム姿で金色のトロフィーを掲げるフランコ・バレージ氏の編集部作成イメージ",
+        "caption": "フランコ・バレージ氏（FOOT VOX編集部作成イメージ）"
+      },
+      "reactions": [
+        {
+          "number": 1,
+          "name": "海外サッカーファン",
+          "text": "悲しい知らせだ。彼はそのポジションの先駆者であり、ACミランを今日の高みへ押し上げた選手だった。安らかに、ピッシニン。",
+          "originalText": "Tragic news. A pioneer of his position and a player who elevated AC Milan to the heights which they are at today. Rest in peace Piscinin.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tj8u5/",
+          "platform": "Reddit r/soccer",
+          "author": "Due_Scientist4063",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドでACミランへの功績に言及。クラブ支持は未確認。",
+          "auditCategory": "ACミランでの象徴性"
+        },
+        {
+          "number": 2,
+          "name": "海外サッカーファン",
+          "text": "スパイクを履いた選手の中でも、間違いなく史上最高の一人。安らかに。",
+          "originalText": "One of the very best to ever lace the boots. RIP.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tj7jm/",
+          "platform": "Reddit r/soccer",
+          "author": "Fracture90000",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで歴代最高級の選手と評価。クラブ支持は未確認。",
+          "auditCategory": "歴代最高DFとしての評価"
+        },
+        {
+          "number": 3,
+          "name": "ACミランファン",
+          "text": "真のレジェンドよ、安らかに。80年代末から90年代初めに育った私は、プレミアリーグが世界を席巻する前にACミランを自分のクラブに選んだ。91-92シーズンのミランは、私のサッカー観を形作ったチームだ。94年W杯のPK戦での彼には、12歳だった私も胸が痛んだ。ミラノへ哀悼を。",
+          "originalText": "Rest in peace to a true legend of the game. Growing up in the late 80s and early 90s, before the proliferation of the Premier League, I chose AC Milan as my club. That 91/92 Milan side with Rossi, Maldini, Costacurta, Baresi, Albertini, and the three dutchmen was the formative team in my football conscience. Even though Baresi was part of the Italy side that beat us in the World Cup, my 12 year old self really felt for him in the penalty shoot out in 94. Condoglianze Milano ❤️🖤❤️🖤❤️",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tqhd0/",
+          "platform": "Reddit r/soccer",
+          "author": "PelvisGrbac",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "本人がACミランを自分のクラブに選んだと明記。",
+          "auditCategory": "ACミランでの象徴性"
+        },
+        {
+          "number": 4,
+          "name": "海外サッカーファン",
+          "text": "彼が手を上げれば、笛が鳴ってオフサイドになった。偉大な選手たちに守備ラインの統率を教えた、本物の達人だった。安らかに。",
+          "originalText": "Whenever he raised his hand, the whistle blew for offside. A true master who taught the greats how to command the defensive line. RIP.🙏",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tn8w1/",
+          "platform": "Reddit r/soccer",
+          "author": "LostEconomy6824",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで守備ライン統率の記憶を投稿。クラブ支持は未確認。",
+          "auditCategory": "現役時代・プレーの記憶"
+        },
+        {
+          "number": 5,
+          "name": "海外サッカーファン",
+          "text": "ミラニスタの皆さんに哀悼の意を。",
+          "originalText": "Condolences to Milanistas",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tpqfs/",
+          "platform": "Reddit r/soccer",
+          "author": "LampseederBroDude51",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "ミラニスタへ外側から哀悼を表明。投稿者の支持クラブは取得元画面で確認できないため断定しない。",
+          "auditCategory": "クラブを越えた追悼"
+        },
+        {
+          "number": 6,
+          "name": "若い世代のファン",
+          "text": "彼の引退後に生まれたので、現役時代を生で見ることはできなかった。でもサッカー界のレジェンドたちが称賛するのを聞き、94年W杯決勝でロマーリオやベベットを抑えた姿を見た。半月板を痛めた状態で、まったく別次元の守備をしていた。なぜ偉大な選手の一人なのか、確信した。",
+          "originalText": "As someone born after his retirement, I never got to watch him play, but had always heard praises for him from legends of the game. Then I saw the 1994 World Cup final, the way he kept Romario, Bebeto and others queit was totally different level , and he did that with a torn meniscus. I was convinced on why is he one of the greats of the game.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tmr8f/",
+          "platform": "Reddit r/soccer",
+          "author": "Suspicious_Shake5814",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "本人がバレージの引退後に生まれたと明記。",
+          "auditCategory": "イタリア代表・ワールドカップ"
+        },
+        {
+          "number": 7,
+          "name": "海外サッカーファン",
+          "text": "安らかに。ミランの真のレジェンドだ。",
+          "originalText": "Rest in peace. True Milan legend.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tipjg/",
+          "platform": "Reddit r/soccer",
+          "author": "Bergo_The_Cool_Gamer",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドでミランの伝説と評価。クラブ支持は未確認。",
+          "auditCategory": "ACミランでの象徴性"
+        },
+        {
+          "number": 8,
+          "name": "ACミランファン",
+          "text": "私にとっては現代最高のセンターバック。史上最も好きなチーム、80年代末から90年代初めのミランで最も好きな選手だった。半月板手術から3週間もたたずに見せた94年W杯決勝のプレーは、レジェンドと呼ぶにふさわしいものだ。安らかに。",
+          "originalText": "For me, the greatest centre back of the modern era. My favourite player of my favourite team of all time - late 80s/early 90s Milan. His performance in the USA 94 final less than 3 weeks after meniscus surgery is the stuff of legend. RIP",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tpkmj/",
+          "platform": "Reddit r/soccer",
+          "author": "charliebobo82",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "本人が80年代末から90年代初めのミランを最も好きなチームと明記。",
+          "auditCategory": "歴代最高DFとしての評価"
+        },
+        {
+          "number": 9,
+          "name": "海外サッカーファン",
+          "text": "史上最高の一人。安らかに。",
+          "originalText": "One of the best to ever do it, RIP. 🌹",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tijrb/",
+          "platform": "Reddit r/soccer",
+          "author": "Nikyu1",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで史上最高級と評価。クラブ支持は未確認。",
+          "auditCategory": "歴代最高DFとしての評価"
+        },
+        {
+          "number": 10,
+          "name": "現役時代を知るファン",
+          "text": "彼の名前を初めて聞いたのは、Channel 4の『Football Italia』だった。この競技そのものを象徴する名前だ。悲しい知らせだ。",
+          "originalText": "A name i first heard on football italia on channel 4, synonymous with the game, sad news",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tme2u/",
+          "platform": "Reddit r/soccer",
+          "author": "leodavidci",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "本人が現役時代の海外向け番組で名前を知った記憶を投稿。",
+          "auditCategory": "現役時代・プレーの記憶"
+        },
+        {
+          "number": 11,
+          "name": "海外サッカーファン",
+          "text": "本当に不死身だと思わせる人だった。安らかに、カピターノ。",
+          "originalText": "Someone who truly felt immortal. Rest in Peace Capitano",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tmfvp/",
+          "platform": "Reddit r/soccer",
+          "author": "jx25bbxb",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドでカピターノと呼び追悼。クラブ支持は未確認。",
+          "auditCategory": "クラブを越えた追悼"
+        },
+        {
+          "number": 12,
+          "name": "海外サッカーファン",
+          "text": "本当に悲しい。マルディーニ、コスタクルタ、タソッティと組んだあの守備ラインは、まるで反則級だった。",
+          "originalText": "really sad to hear this, that defensive line with Maldini, Costacurta, Tassotti was basically a cheat code",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tq312/",
+          "platform": "Reddit r/soccer",
+          "author": "WW_Jones",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドでミラン守備陣を回想。クラブ支持は未確認。",
+          "auditCategory": "ACミランでの象徴性"
+        },
+        {
+          "number": 13,
+          "name": "海外サッカーファン",
+          "text": "歴代最高のDFの一人だ。",
+          "originalText": "One of the all-time great defenders.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tosxm/",
+          "platform": "Reddit r/soccer",
+          "author": "ToshiroTatsuyaFan",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで歴代最高級のDFと評価。クラブ支持は未確認。",
+          "auditCategory": "歴代最高DFとしての評価"
+        },
+        {
+          "number": 14,
+          "name": "W杯を記憶するファン",
+          "text": "94年W杯決勝のあと、彼が涙を流す姿は胸が張り裂けそうだった。安らかに。",
+          "originalText": "It's heartbreaking seeing him cry at the end of 1994 WC Final. Rest in peace.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tp36q/",
+          "platform": "Reddit r/soccer",
+          "author": "MugiMartin",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "1994年W杯決勝後の記憶を具体的に投稿。",
+          "auditCategory": "イタリア代表・ワールドカップ"
+        },
+        {
+          "number": 15,
+          "name": "海外サッカーファン",
+          "text": "安らかに、フランコ・バレージ。予測する力そのものが芸術だった。",
+          "originalText": "rip franco baresi. anticipation as artform: https://youtu.be/18g-pB19KRY?is=575wsqIjT3_2C0yM",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tmr0y/",
+          "platform": "Reddit r/soccer",
+          "author": "msskl",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで予測力を具体的に評価。クラブ支持は未確認。",
+          "auditCategory": "現役時代・プレーの記憶"
+        },
+        {
+          "number": 16,
+          "name": "海外サッカーファン",
+          "text": "あまりに突然だ。かつてのサッカー界のアイコンたちを見ながら、この世界に残された時間は長くないのかもしれないと考える日が来るのを、ずっと恐れていた。安らかに。",
+          "originalText": "Out of nowhere. I always dreaded the idea of seeing old icons of the game and thinking that they don't have much time left in this world. RIP.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tjaan/",
+          "platform": "Reddit r/soccer",
+          "author": "Similar-Earth8288",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで名選手の死を悼む投稿。クラブ支持は未確認。",
+          "auditCategory": "クラブを越えた追悼"
+        },
+        {
+          "number": 17,
+          "name": "若い世代のファン",
+          "text": "サッカー史を調べるとき、最も好きで見てきたDFだ。長身がほぼ必須と思われた時代に、比較的小柄ながら80年代の先駆的なスイーパーだった。安らかに、カピターノ。",
+          "originalText": "He has personally been my favourite defender to watch when I try to research about football history one of pioneering sweeper defenders of the 80s especially for a relatively short dude in an era when being tall was almost a necessity to play football in a position that demands it RIP capitano",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tqoef/",
+          "platform": "Reddit r/soccer",
+          "author": "Key_Way2390",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "本人がサッカー史を調べながら映像を見てきたと明記。",
+          "auditCategory": "次世代への影響・継承"
+        },
+        {
+          "number": 18,
+          "name": "海外サッカーファン",
+          "text": "このスポーツの真の巨人だった。どうか安らかに。",
+          "originalText": "A true giant of the sport, godspeed.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tjc6g/",
+          "platform": "Reddit r/soccer",
+          "author": "Stranger1982",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで競技全体の巨人と評価。クラブ支持は未確認。",
+          "auditCategory": "クラブを越えた追悼"
+        },
+        {
+          "number": 19,
+          "name": "W杯を記憶するファン",
+          "text": "唯一無二の選手だった。94年W杯決勝で負傷から戻り、最高のプレーを見せた姿は、センターバックの闘志と強さそのものだった。安らかに。",
+          "originalText": "He was one of a kind .He represented the grit and strength of a cb when he returned from injury in the 1994 wc final and was at his very best.Rip",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tmxgc/",
+          "platform": "Reddit r/soccer",
+          "author": "Top_Operation_9920",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "1994年W杯決勝の復帰とプレーを具体的に投稿。",
+          "auditCategory": "イタリア代表・ワールドカップ"
+        },
+        {
+          "number": 20,
+          "name": "海外サッカーファン",
+          "text": "ミラン史、そしてサッカー史に残る最高のDFの一人。安らかに。",
+          "originalText": "One of the best defenders in milans history and football history. RIP.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tlb0r/",
+          "platform": "Reddit r/soccer",
+          "author": "JJ_Designss",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドでミラン史とサッカー史の双方から評価。クラブ支持は未確認。",
+          "auditCategory": "ACミランでの象徴性"
+        },
+        {
+          "number": 21,
+          "name": "海外サッカーファン",
+          "text": "胸が痛む。サッカー界のレジェンドたちが次々と去っていくのは、何とも言えない寂しさがある。安らかに。",
+          "originalText": "Heartbreaking story. So many legends of the game leaving us, it is a bittersweet feeling. Rest in peace.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tnakz/",
+          "platform": "Reddit r/soccer",
+          "author": "Knapss",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで世代を代表する名選手の死を悼む投稿。クラブ支持は未確認。",
+          "auditCategory": "クラブを越えた追悼"
+        },
+        {
+          "number": 26,
+          "name": "現役時代を知るファン",
+          "text": "昔から最も好きな選手の一人。94年のことは決して忘れない。",
+          "originalText": "One of my favourite players of all time. Will never forget '94",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0to9br/",
+          "platform": "Reddit r/soccer",
+          "author": "C_stat",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "本人が1994年の記憶とともに長年の好きな選手と明記。",
+          "auditCategory": "現役時代・プレーの記憶"
+        },
+        {
+          "number": 22,
+          "name": "海外サッカーファン",
+          "text": "最高の選手だった。守備を芸術のように見せた。安らかに。",
+          "originalText": "The best, made defending seem like an art. RIP",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tq9ht/",
+          "platform": "Reddit r/soccer",
+          "author": "_DuckieFuckie_",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで守備と選手評価を投稿。クラブ支持は未確認。",
+          "auditCategory": "歴代最高DFとしての評価"
+        },
+        {
+          "number": 28,
+          "name": "海外サッカーファン",
+          "text": "その名が歴史に永遠に残ると知りながら、安らかに眠ってほしい。ご家族へ祈りと哀悼を。",
+          "originalText": "May he rest in peace knowing his name will forever be in history. Prayers and condolences to his family. ❤️❤️",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tkxif/",
+          "platform": "Reddit r/soccer",
+          "author": "TentMorning",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで歴史に残る存在とし家族へ哀悼。クラブ支持は未確認。",
+          "auditCategory": "次世代への影響・継承"
+        },
+        {
+          "number": 24,
+          "name": "現役時代を知るファン",
+          "text": "ここには現役時代を見ていない若い人も多いと思うが、彼は史上最高のDFの一人だった。",
+          "originalText": "I know a lot of people here are too young for having seen him play, but he was one of the greatest defenders of all times.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0toa29/",
+          "platform": "Reddit r/soccer",
+          "author": "LordAmras",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "現役時代を見ていない若い利用者へ向けて評価を伝える文脈。",
+          "auditCategory": "歴代最高DFとしての評価"
+        },
+        {
+          "number": 25,
+          "name": "海外サッカーファン",
+          "text": "サッカー界の絶対的なレジェンド。悲しい知らせだ。",
+          "originalText": "Absolute legend of the game. Sad news.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tiz49/",
+          "platform": "Reddit r/soccer",
+          "author": "uncle_monty",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで競技全体の伝説と追悼。クラブ支持は未確認。",
+          "auditCategory": "クラブを越えた追悼"
+        },
+        {
+          "number": 23,
+          "name": "海外サッカーファン",
+          "text": "ひどく悲しい知らせだ。安らかに。",
+          "originalText": "Terrible news💔💔💔R.I.P",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tidjd/",
+          "platform": "Reddit r/soccer",
+          "author": "Alarming_Dog_9542",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで明確な哀悼を投稿。クラブ支持は未確認。",
+          "auditCategory": "クラブを越えた追悼"
+        },
+        {
+          "number": 27,
+          "name": "海外サッカーファン",
+          "text": "サッカー界のレジェンドだった。安らかに、フランコ。",
+          "originalText": "What a legend of the game man, RIP Franco.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tj8cd/",
+          "platform": "Reddit r/soccer",
+          "author": "Wakanda-shit-is-that",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで競技全体の伝説と追悼。クラブ支持は未確認。",
+          "auditCategory": "クラブを越えた追悼"
+        },
+        {
+          "number": 29,
+          "name": "海外サッカーファン",
+          "text": "一人のアイコンへ、安らかな眠りを。",
+          "originalText": "Rest in peace to an icon",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tnhag/",
+          "platform": "Reddit r/soccer",
+          "author": "the_forge--",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "r/soccerの追悼スレッドで象徴的存在として追悼。クラブ支持は未確認。",
+          "auditCategory": "クラブを越えた追悼"
+        },
+        {
+          "number": 30,
+          "name": "若い世代のファン",
+          "text": "彼は『レジェンドたちにとってのレジェンド』だった。サッカー界に残したものは、言葉では表せない。あの世代の偉大な選手たちには、直接体験できなかった私たち若い世代へ、これからも現役時代の物語を伝えてほしい。",
+          "originalText": "He was a legend's legend. No words to describe his legacy in football. I hope all the greats of his generation and above live good lifes, and always tell stories about their careers to us younger ones that was not so priviliged to experience it directly.",
+          "sourceUrl": "https://www.reddit.com/r/soccer/comments/1vbhwn3/comment/p0tn22b/",
+          "platform": "Reddit r/soccer",
+          "author": "anakmager",
+          "postedAt": "2026-07-31（Reddit公開日。時刻は取得元画面で非表示）",
+          "affiliationEvidence": "本人が現役時代を直接体験できなかった若い世代として投稿。",
+          "auditCategory": "次世代への影響・継承"
+        }
+      ],
+      "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "ACミランは2026年7月31日、元主将で名誉副会長のフランコ・バレージ氏が同日に66歳で死去したと発表した。クラブの公式死亡発表に死因の記載はなく、本記事では死因を特定しない。"
+        },
+        {
+          "type": "heading",
+          "text": "ACミランとイタリアを背負った背番号6"
+        },
+        {
+          "type": "paragraph",
+          "text": "バレージ氏は現役20年をACミランで過ごし、公式戦719試合に出場。主将としてセリエAを6度、欧州チャンピオンズカップを3度制した。2020年からは名誉副会長を務め、現役引退後に背番号6はクラブ史上初の永久欠番となった。"
+        },
+        {
+          "type": "paragraph",
+          "text": "イタリア代表では81試合に出場し、1982年ワールドカップ優勝メンバーとなった。1991年から代表主将を務め、1994年大会では決勝までチームを導いた。訃報を受け、世界のファンからは追悼とともに、守備の読み、ライン統率、クラブへの忠誠、後世への影響を語る声が相次いだ。"
+        },
+        {
+          "type": "video",
+          "title": "フランコ・バレージ氏のプレー映像",
+          "embedUrl": "https://www.youtube.com/embed/aWBL0S_re-0",
+          "href": "https://youtu.be/aWBL0S_re-0?si=kXBjkigxUZZ-sZkC",
+          "provider": "YouTube"
+        },
+        {
+          "type": "heading",
+          "text": "フランコ・バレージ氏を悼む世界の反応"
+        },
+        {
+          "type": "reactions",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "type": "paragraph",
+          "text": "※「ピッシニン」はミラノ方言で「小さい子」「小柄な人」という意味の、若い頃のバレージ氏の愛称。"
+        },
+        {
+          "type": "reactions",
+          "start": 2,
+          "end": 21
+        },
+        {
+          "type": "reactions",
+          "start": 22,
+          "end": 22
+        },
+        {
+          "type": "reactions",
+          "start": 23,
+          "end": 23
+        },
+        {
+          "type": "reactions",
+          "start": 24,
+          "end": 24
+        },
+        {
+          "type": "reactions",
+          "start": 25,
+          "end": 25
+        },
+        {
+          "type": "reactions",
+          "start": 26,
+          "end": 26
+        },
+        {
+          "type": "reactions",
+          "start": 27,
+          "end": 27
+        },
+        {
+          "type": "reactions",
+          "start": 28,
+          "end": 28
+        },
+        {
+          "type": "reactions",
+          "start": 29,
+          "end": 29
+        },
+        {
+          "type": "reactions",
+          "start": 30,
+          "end": 30
+        },
+        {
+          "type": "text",
+          "role": "source",
+          "text": "ACミラン公式：FRANCO BARESI FOREVER（死去発表）",
+          "href": "https://www.acmilan.com/en/news/articles/club/2026-07-31/franco-baresi-forever"
+        },
+        {
+          "type": "text",
+          "role": "source",
+          "text": "The Guardian：フランコ・バレージ氏死去（年齢・主要実績）",
+          "href": "https://www.theguardian.com/football/2026/jul/31/franco-baresi-iconic-former-milan-and-italy-defender-dies-aged-66"
+        },
+        {
+          "type": "text",
+          "role": "source",
+          "text": "ACミラン公式プロフィール：出場数・獲得タイトル・背番号6・名誉副会長",
+          "href": "https://www.acmilan.com/en/club/legends/player/baresi"
+        },
+        {
+          "type": "text",
+          "role": "source",
+          "text": "FIGC Hall of Fame：イタリア代表81試合・1982年W杯優勝・代表主将",
+          "href": "https://www.figc.it/it/full-html?path=%2Fmuseo-del-calcio%2Fhall-of-fame%2Fle-stelle%2Ffranco-baresi"
+        }
+      ],
+      "auditNote": "候補35件超を確認し、敬意ある30件を採用。原文・個別URL・媒体・投稿者・公開日・所属根拠を各reactionに保持した。死亡を茶化す投稿、病歴や死因の推測、実質的重複、文脈不明の短文は除外。",
+      "auditSources": [
+        {
+          "label": "r/soccer：ACミラン公式発表を共有した追悼スレッド",
+          "url": "https://www.reddit.com/r/soccer/comments/1vbhwn3/franco_baresi_has_passed_away/"
+        }
+      ]
+    },
+    {
       "articleId": "ao-tanaka-leeds-sunderland-preseason",
       "listOnHome": true,
       "relatedEligible": true,
