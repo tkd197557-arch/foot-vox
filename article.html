@@ -18,7 +18,7 @@
   <meta name="twitter:image" content="">
   <title>FOOT VOX</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=20260730">
+  <link rel="stylesheet" href="styles.css?v=20260731">
 </head>
 <body id="page-top">
   <!-- PROTOTYPE: Editorial direction selected for design refinement. -->
@@ -80,10 +80,10 @@
           <h2 class="section-title">関連記事</h2>
           <ul class="related-list"></ul>
 
-          <div class="share-row" aria-label="共有コントロールの外観例">
-            <span class="static-control">𝕏 で共有</span>
-            <span class="static-control">リンクをコピー</span>
-            <span class="static-control static-control--success">コピーしました</span>
+          <div class="share-row" aria-label="記事リンク">
+            <button type="button" class="static-control" data-share-x hidden>𝕏 で共有</button>
+            <button type="button" class="static-control copy-control" data-copy-article-url aria-describedby="copy-status">リンクをコピー</button>
+            <span id="copy-status" class="copy-status" data-copy-status role="status" aria-live="polite" hidden></span>
           </div>
 
           <div class="article-meta">
@@ -132,42 +132,6 @@
         </div>
       </section>
 
-      <section class="side-section">
-        <h2 class="side-section__heading">記事を検索</h2>
-        <div class="side-section__body">
-          <div class="search-form" aria-label="検索フォームの外観例">
-            <input type="search" placeholder="選手名・クラブ名" aria-label="検索キーワード">
-            <span aria-hidden="true">検索</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="side-section" data-sidebar-section="taxonomy">
-        <h2 class="side-section__heading">カテゴリー・選手</h2>
-        <div class="side-section__body">
-          <ul class="category-list" data-taxonomy-list="categories">
-            <li data-taxonomy-item data-taxonomy-type="category"><span data-taxonomy-field="label"></span><b data-taxonomy-field="count"></b></li>
-            <li data-taxonomy-item data-taxonomy-type="category"><span data-taxonomy-field="label"></span><b data-taxonomy-field="count"></b></li>
-            <li data-taxonomy-item data-taxonomy-type="category"><span data-taxonomy-field="label"></span><b data-taxonomy-field="count"></b></li>
-            <li data-taxonomy-item data-taxonomy-type="category"><span data-taxonomy-field="label"></span><b data-taxonomy-field="count"></b></li>
-            <li data-taxonomy-item data-taxonomy-type="category"><span data-taxonomy-field="label"></span><b data-taxonomy-field="count"></b></li>
-            <li data-taxonomy-item data-taxonomy-type="category"><span data-taxonomy-field="label"></span><b data-taxonomy-field="count"></b></li>
-          </ul>
-          <div class="kana-group" data-kana-group data-expanded="false">
-            <div class="kana-group__label" data-sidebar-field="group-label"></div>
-            <ul class="category-list" data-taxonomy-list="players">
-              <li data-taxonomy-item data-taxonomy-type="player"><span data-taxonomy-field="label"></span><b data-taxonomy-field="count"></b></li>
-              <li data-taxonomy-item data-taxonomy-type="player"><span data-taxonomy-field="label"></span><b data-taxonomy-field="count"></b></li>
-            </ul>
-          </div>
-          <div class="kana-group" data-kana-group data-expanded="false">
-            <div class="kana-group__label" data-sidebar-field="group-label"></div>
-          </div>
-          <div class="kana-group" data-kana-group data-expanded="false">
-            <div class="kana-group__label" data-sidebar-field="group-label"></div>
-          </div>
-        </div>
-      </section>
     </aside>
   </main>
 
@@ -214,6 +178,8 @@
       const updated = document.querySelector("[data-article-updated-date]");
       const tags = document.querySelector("[data-article-tags]");
       const relatedList = document.querySelector(".related-list");
+      const copyButton = document.querySelector("[data-copy-article-url]");
+      const copyStatus = document.querySelector("[data-copy-status]");
       const requestedId = new URLSearchParams(location.search).get("id");
       const siteBaseUrl = "https://tkd197557-arch.github.io/foot-vox/";
       const MAX_RECENT_ARTICLES = 7;
@@ -285,31 +251,55 @@
             link.href = ids.has(data.articleId) ? articleHref(data.articleId) : data.href || "article.html";
             link.textContent = data.title;
           });
-        document.querySelectorAll('[data-taxonomy-type="category"]').forEach((item, index) => {
-          const data = sidebar.taxonomy.categories[index];
-          if (!data) return;
-          item.dataset.taxonomyId = data.taxonomyId;
-          item.querySelector('[data-taxonomy-field="label"]').textContent = data.label;
-          item.querySelector('[data-taxonomy-field="count"]').textContent = data.count;
-        });
-        document.querySelectorAll("[data-kana-group]").forEach((group, index) => {
-          const data = sidebar.taxonomy.playerGroups[index];
-          if (!data) return;
-          group.dataset.kanaGroup = data.kana;
-          group.dataset.expanded = String(data.expanded);
-          group.querySelector('[data-sidebar-field="group-label"]').textContent = data.label;
-          group.querySelectorAll('[data-taxonomy-type="player"]').forEach((item, playerIndex) => {
-            const player = data.players[playerIndex];
-            if (!player) return;
-            item.dataset.taxonomyId = player.taxonomyId;
-            item.querySelector('[data-taxonomy-field="label"]').textContent = player.label;
-            item.querySelector('[data-taxonomy-field="count"]').textContent = player.count;
-          });
-        });
       };
       window.FOOT_VOX = window.FOOT_VOX || {};
-      const context = { ready: null, loadStatus: "loading", articleData: null, relatedArticles: [] };
+      const context = {
+        ready: null,
+        loadStatus: "loading",
+        articleData: null,
+        relatedArticles: [],
+        canonicalUrl: ""
+      };
       window.FOOT_VOX.articleContext = context;
+      let copyStatusTimer = null;
+      const showCopyStatus = (message, state) => {
+        if (!copyStatus) return;
+        if (copyStatusTimer) window.clearTimeout(copyStatusTimer);
+        copyStatus.textContent = message;
+        copyStatus.dataset.state = state;
+        copyStatus.hidden = false;
+        copyStatusTimer = window.setTimeout(() => {
+          copyStatus.hidden = true;
+        }, 2400);
+      };
+      const writeClipboardText = async (text) => {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.append(textarea);
+        textarea.select();
+        const copied = document.execCommand("copy");
+        textarea.remove();
+        return copied;
+      };
+      copyButton?.addEventListener("click", async () => {
+        if (copyStatus) copyStatus.hidden = true;
+        try {
+          await context.ready;
+          if (!context.canonicalUrl) throw new Error("Canonical URL is unavailable");
+          const copied = await writeClipboardText(context.canonicalUrl);
+          if (!copied) throw new Error("Clipboard write failed");
+          showCopyStatus("コピーしました", "success");
+        } catch {
+          showCopyStatus("コピーできませんでした", "error");
+        }
+      });
       context.ready = fetch("data/articles.json?v=20260730", { cache: "no-store" })
         .then((response) => {
           if (!response.ok) throw new Error(`Article data request failed: ${response.status}`);
@@ -334,6 +324,7 @@
             `article.html?id=${encodeURIComponent(article.articleId)}`,
             siteBaseUrl
           ).href;
+          context.canonicalUrl = requestedArticle ? canonicalUrl : "";
           const socialImageUrl = new URL(article.image.src, siteBaseUrl).href;
           const isIndexable = Boolean(requestedArticle) && article.indexable !== false;
 
