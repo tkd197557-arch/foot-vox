@@ -95,6 +95,500 @@
   },
   "articles": [
     {
+      "articleId": "ao-tanaka-leeds-sunderland-preseason",
+      "listOnHome": true,
+      "relatedEligible": true,
+      "indexable": true,
+      "title": "田中碧が先発したリーズ戦に海外ファンが反応　先発時の安定感を評価",
+      "seoTitle": "田中碧が先発したリーズ対サンダーランド戦への海外の反応",
+      "category": "プレミアリーグ",
+      "tags": [
+        "田中碧",
+        "リーズ・ユナイテッド",
+        "サンダーランド",
+        "プレシーズン",
+        "海外の反応"
+      ],
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "description": "田中碧が先発したリーズ・ユナイテッド対サンダーランドのプレシーズンマッチは、リーズが1-0で勝利。田中のプレーと試合全体に寄せられた海外ファンの反応を紹介する。",
+      "image": {
+        "src": "assets/articles/ao-tanaka-leeds-sunderland-preseason.jpg",
+        "alt": "白を基調としたユニフォームでプレーする田中碧を描いた記事アイキャッチ",
+        "caption": "編集部作成イメージ"
+      },
+      "reactions": [
+        {
+          "number": 1,
+          "name": "リーズ関連コミュニティ",
+          "text": "田中、ものすごくいい試合をしている。",
+          "originalText": "Tanaka is having a banger of a game",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s1f0p/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "OrdinaryLavishness11",
+          "postedAt": "2026-07-31 09:18:31 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドで田中を直接評価した投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 2,
+          "name": "リーズ関連コミュニティ",
+          "text": "もう十分わかった。ムハレモビッチは一流だ。",
+          "originalText": "I’ve seen enough… Muharaemovic is class!",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0rusbi/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "OrdinaryLavishness11",
+          "postedAt": "2026-07-31 08:43:09 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 3,
+          "name": "リーズ関連コミュニティ",
+          "text": "タンクナカ！",
+          "originalText": "TANKnaka",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0rxvq8/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "OrdinaryLavishness11",
+          "postedAt": "2026-07-31 08:59:26 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドで田中の名前を使ったリアクション。本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 4,
+          "name": "リーズ関連コミュニティ",
+          "text": "すごい前半だった。",
+          "originalText": "Unreal half",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s23di/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Better-Inflation-194",
+          "postedAt": "2026-07-31 09:22:13 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドで前半終了直後に投稿されたリアクション。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 5,
+          "name": "リーズ関連コミュニティ",
+          "text": "あの前半はタリクと田中が抜けて目立っていた。ボルナウも良かった。",
+          "originalText": "Tarik and Tanaka standout players that half by a mile. Bornauw looked good too.",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s25en/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Hinglemacpsu",
+          "postedAt": "2026-07-31 09:22:32 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドで前半の田中を直接評価した投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 6,
+          "name": "リーズ関連コミュニティ",
+          "text": "ボルナウは売却に向けたアピール中なのか、それともファルケの信頼を取り戻したのか？",
+          "originalText": "Is Bornauw in the shop window or has he won Farke over?",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0ruyyl/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "DrMadStaxx",
+          "postedAt": "2026-07-31 08:44:07 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 7,
+          "name": "リーズ関連コミュニティ",
+          "text": "アーロンソンが戻れば守備がかなり良くなると言ったとき、このコミュニティがどう反応するか楽しみだ。アーロンソンのW杯での出来はひどかったけど、ファルケは彼の使い方を知っているし、田中より一段上だと思う。",
+          "originalText": "This sub is gonna be funny when we look much better defensively when Aaronson is back. Though he had a shiiiiit world cup. Farke knows how to use him, and he is a step up from Tanaka.",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s0n1k/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "tgcleric",
+          "postedAt": "2026-07-31 09:14:19 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドで田中とアーロンソンを比較した投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 8,
+          "name": "リーズ関連コミュニティ",
+          "text": "ヌメチャが、あの厄介なGKの意表を突いた（笑）。",
+          "originalText": "Nmecha caught that annoying keeper out lol",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0rv5je/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "flyboy1234",
+          "postedAt": "2026-07-31 08:45:05 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドで決勝点に反応した投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 9,
+          "name": "リーズ関連コミュニティ",
+          "text": "田中は先発するたびにすごくいいのに、途中出場だとどうしてあんなに苦戦するんだろう（笑）。",
+          "originalText": "How is Tanaka so good every time he starts but so bad when he comes on as a sub lol",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0rv7xm/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Hinglemacpsu",
+          "postedAt": "2026-07-31 08:45:25 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 10,
+          "name": "リーズ関連コミュニティ",
+          "text": "ロングスタッフを見るほど、昨季ファルケは彼を十分に使わなかったと思う。負傷までは数少ない好調な選手だったのに、チームの調子が戻ってから出番を取り戻せなかった。",
+          "originalText": "More I watch Longstaff, the more I think Farke under utilized him last season. Was one of the few good players until his injury and never really got back into the team when form turned around",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s1itf/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Better-Inflation-194",
+          "postedAt": "2026-07-31 09:19:06 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 11,
+          "name": "リーズ関連コミュニティ",
+          "text": "田中は残すべきだ。調子のいい日は本当にすごい。",
+          "originalText": "Need to keep him. He’s unreal on his day",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s1jh3/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "tom_onfilm",
+          "postedAt": "2026-07-31 09:19:12 JST",
+          "affiliationEvidence": "田中の好プレーを評価したコメントへの返信。r/LeedsUnitedへの投稿で、本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 12,
+          "name": "リーズ関連コミュニティ",
+          "text": "現地で見ているけど、中盤に厚みがないように感じる。ミドルブロックも少し妙だ。新しいセンターバックは素晴らしく、多くのプレーが彼を経由している。",
+          "originalText": "At the match and we seem to have no substantive midfield. Also the mid block situation is weird. New CB is excellent and a lot of the play seems to run through him. Wonder if that stays once Amps is on the pitch.",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s3rek/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "TejasChainsawMascara",
+          "postedAt": "2026-07-31 09:31:20 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドで現地観戦中と明記した投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 13,
+          "name": "リーズ関連コミュニティ",
+          "text": "親善試合としてはなかなかいい試合だ。田中とロングスタッフは中盤で良かったけど、明らかに一番目立ったのはムハレモビッチ。素晴らしかった。",
+          "originalText": "Decent game this for a friendly. Tanaka and Longstaff have both been good in midfield but the clear stand out is muharemovic, been brilliant",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s2dru/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Boris_Ignatievich",
+          "postedAt": "2026-07-31 09:23:49 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドで田中の中盤でのプレーを直接評価した投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 14,
+          "name": "リーズ関連コミュニティ",
+          "text": "タリクはとんでもない。",
+          "originalText": "Tarik is ridiculous",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s1zom/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Hadmatter_",
+          "postedAt": "2026-07-31 09:21:40 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 15,
+          "name": "リーズ関連コミュニティ",
+          "text": "田中は、試合の流れに入りながら調子を上げるタイプなのかも。スタートから走るのと、相手がもうスピードに乗ってから走り始めるのでは違うからね。",
+          "originalText": "Needs to grow with the game maybe. Like starting a race at the start line Vs having to start running once they reach you; they are already up to speed and it catches you out",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0rw6ir/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "InnocentPossum",
+          "postedAt": "2026-07-31 08:50:27 JST",
+          "affiliationEvidence": "田中の先発時と途中出場時の違いを論じたコメントへの返信。r/LeedsUnitedへの投稿で、本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 16,
+          "name": "リーズ関連コミュニティ",
+          "text": "ムハレモビッチは実戦でも思い切ったことを試しそうだ。普段の慎重な組み立てとは違う形で、相手の意表を突ける選択肢になるのはいいね。",
+          "originalText": "Man, Muharemovic is just going to try shit in games. Will be nice to have an option to catch opponents off guard from our typical more methodical approach.",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s8bh0/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "flyboy1234",
+          "postedAt": "2026-07-31 09:56:22 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 17,
+          "name": "リーズ関連コミュニティ",
+          "text": "タリクは素晴らしく、ボルナウも印象的。田中は生き生きしていたし、ガビは自分のサイドで何も起こさせなかった。ミルズも悪くなく、ジェームズは相手の疲れた脚を狙って終盤に仕掛けていた。今後は70分あたりからジェームズとアーロンソンを投入して、疲れた相手を翻弄する展開が楽しみだ。シュタッハは本当に別格。ロドンも今夜は集中していた。",
+          "originalText": "Tarik amazing, Bornauw impressive, Tanaka looking lively & Gabi made sure nothing happened on his side. Mills was alright, James looking to make stuff happen late on against their tired legs. Looking forward to James & Aaronson on in the 70th minute and running rings around dead legs. Stach is just ridiculous. Rodon with better focus tonight.",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/p0sfkcd/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Hadmatter_",
+          "postedAt": "2026-07-31 10:36:23 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合後スレッドで田中を直接評価した投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 18,
+          "name": "リーズ関連コミュニティ",
+          "text": "タリクは別格として、ボルナウも素晴らしかった。控えセンターバックとして残ってほしい。ここまでとても頼もしく見えた。",
+          "originalText": "Tarik aside who has been our best player, Bornauw has been excellent, I hope he stays as our back up cb. Looked very reliable so far.",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s7msn/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Hadmatter_",
+          "postedAt": "2026-07-31 09:52:37 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 19,
+          "name": "リーズ関連コミュニティ",
+          "text": "田中がいい試合をしたのは良かった。W杯敗退の受け止め方を心配していたんだ。あれは本当に残酷だったから。",
+          "originalText": "Good that tanaka had a good game. I was worried about how he’d take the exit from the wc, that was brutal",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/p0tdotv/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Perspii7",
+          "postedAt": "2026-07-31 14:07:13 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合後スレッドで田中を直接評価した投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 20,
+          "name": "リーズ関連コミュニティ",
+          "text": "冗談ではなく、タリクの銅像を建てよう。ボールを扱う選手としてはラフィーニャ以来の逸材かもしれない。",
+          "originalText": "I am not even joking, a Statue for Tariq. Probably the best controller of the ball since Raphinia.",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/p0sf181/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Complete-Worry7143",
+          "postedAt": "2026-07-31 10:33:27 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合後スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 21,
+          "name": "リーズ関連コミュニティ",
+          "text": "田中にはリーズでまだ伸びしろがあると思う。残ってくれることを願うよ。",
+          "originalText": "I feel he’s got more growth with us for sure. I hope we do retain him!",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s1ubi/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Jugggiler",
+          "postedAt": "2026-07-31 09:20:50 JST",
+          "affiliationEvidence": "田中を残すべきだというコメントへの返信。r/LeedsUnitedへの投稿で、本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 22,
+          "name": "リーズ関連コミュニティ",
+          "text": "もう十分見た。タリクは世界最高のセンターバックだ。",
+          "originalText": "I've seen enough Tarik is the best CB in the world",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0rws5w/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Hinglemacpsu",
+          "postedAt": "2026-07-31 08:53:34 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 23,
+          "name": "リーズ関連コミュニティ",
+          "text": "ブロビー、もう交代したのか。笑ってしまう。",
+          "originalText": "Brobbey off already. Hilarious",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s0vzy/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "ccj-1996",
+          "postedAt": "2026-07-31 09:15:39 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 24,
+          "name": "リーズ関連コミュニティ",
+          "text": "楽しめた。ムハレモビッチは怪物で、ボルナウは堅実、シュタッハは……いつものシュタッハだ。トラフォードが入れば守備がどれほど堅くなるか想像できる。私は今もニョントが好きだ。田中もいい試合をした。プレシーズンでどう形になるか楽しみだし、ケアンズが無失点に抑えたのもうれしい。",
+          "originalText": "Enjoyed that. Muharemovic is a beast. Bornauw looks solid. Stach is well... Stach. You can imagine how solid we're going to be at the back when Trafford starts playing. I still like Gnonto. Tanaka had a good game. It's going to be interesting seeing how all this comes together over preseason. Really pleased that Cairns got his clean sheet.",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/p0synn6/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "ElvishMystical",
+          "postedAt": "2026-07-31 12:27:11 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合後スレッドで田中を直接評価した投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 25,
+          "name": "リーズ関連コミュニティ",
+          "text": "タリクにこれ以上望めないほどのパフォーマンスだった。なんて選手だ。",
+          "originalText": "Could not have asked for a better performance from Tarik what a player",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s7t1r/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Hinglemacpsu",
+          "postedAt": "2026-07-31 09:53:33 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 26,
+          "name": "リーズ関連コミュニティ",
+          "text": "LUTVの試合音声、ものすごく小さくない？",
+          "originalText": "Is it just me or is the match audio super quiet on LUTV?",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0ru4bi/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "FlameKong",
+          "postedAt": "2026-07-31 08:39:38 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 27,
+          "name": "リーズ関連コミュニティ",
+          "text": "ESPN2では問題なく聞こえるよ。",
+          "originalText": "Sounds fine on ESPN2",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0ruepl/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "DrMadStaxx",
+          "postedAt": "2026-07-31 08:41:09 JST",
+          "affiliationEvidence": "試合配信の音声に関するコメントへの返信。r/LeedsUnitedへの投稿で、本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 28,
+          "name": "リーズ関連コミュニティ",
+          "text": "タリクと田中は2人とも素晴らしかった。ヌメチャもね。ウィルソンとグドムンドソンからまだ何も見られていないのだけが残念だ。",
+          "originalText": "They’ve been great. Nmecha too. Just such a shame we’re not seeing anything out of Wilson and Gudmundsson :(",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/p0s2ilz/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "OrdinaryLavishness11",
+          "postedAt": "2026-07-31 09:24:33 JST",
+          "affiliationEvidence": "タリクと田中が前半の目立った選手だというコメントへの返信。r/LeedsUnitedへの投稿で、本人のサポーター所属は未確認。",
+          "auditCategory": "田中碧本人への直接反応"
+        },
+        {
+          "number": 29,
+          "name": "リーズ関連コミュニティ",
+          "text": "リーズにもう一人タリクを迎えられるなら、腎臓を一つ差し出すよ。",
+          "originalText": "Offering a kidney for another Tarik at Leeds",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/p0sejiu/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "Practical_Skin_6550",
+          "postedAt": "2026-07-31 10:30:46 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合後スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 30,
+          "name": "リーズ関連コミュニティ",
+          "text": "ここまで守備に自信を持てるのは久しぶりだ。ケアンズもいい試合で、少なくとも一度プレーする姿を見られて良かった。",
+          "originalText": "It’s been a long time since I felt this confident in our defence. Still feels strange after that phase with Marsch (and Bielsa) where we conceded from basically every corner ​Good game from Cairns, glad to see him play at least once. He’s always been there and seems like a really nice lad",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/p0si31w/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "jetc11",
+          "postedAt": "2026-07-31 10:50:25 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合後スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 31,
+          "name": "リーズ関連コミュニティ",
+          "text": "現地にいたけど、カメラは人がほとんどいないサンダーランド側を主に映していた。リーズ側はほぼ埋まっていたよ。サンダーランドの応援は残念だったけど、長年のサポーターとして初めてリーズを生で見られたし、これが最後の米国ツアーにならないでほしい。ヌメチャのゴール後のハイライトをYouTubeで見て、歓声を聞いてほしい。リーズファンはたくさんいた。",
+          "originalText": "I was at the match, and the match camera was looking primarily at the Sunderland half of the stadium which had barely anyone. The Leeds half was mostly full. Sunderland’s support was embarrassing, I agree, but as a longtime supporter getting to see Leeds play for the first time ever in-person, I hope it’s not the last US tour. Also, go watch the highlights on YouTube after Nmecha’s goal and listen to the crowd. There was plenty of Leeds there.",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/p0t50nw/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "chylomicronbelly",
+          "postedAt": "2026-07-31 13:07:56 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合後スレッドで、長年のリーズサポーターかつ現地観戦者と自己申告した投稿。",
+          "auditCategory": "試合・リーズ全体への反応"
+        },
+        {
+          "number": 32,
+          "name": "リーズ関連コミュニティ",
+          "text": "W杯直後の開催なのは集客に響いたと思う。それでも米国ツアーはなくならないだろう。リーズを含め米国人オーナーのクラブは、現地での知名度を高めたいはずだから。",
+          "originalText": "Playing this tour just after the World Cup being there doesn’t help I don’t think. No way the US tours stop - we have US owners (as do many other teams) and they’ll all be desperate to increase our/their profile over there.",
+          "sourceUrl": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/p0tv5jb/",
+          "platform": "Reddit r/LeedsUnited",
+          "author": "mooninuranus",
+          "postedAt": "2026-07-31 16:20:02 JST",
+          "affiliationEvidence": "r/LeedsUnitedの当該試合後スレッドへの投稿。本人のサポーター所属は未確認。",
+          "auditCategory": "試合・リーズ全体への反応"
+        }
+      ],
+      "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "2026年7月31日（日本時間）、リーズ・ユナイテッドは米ニュージャージー州のSports Illustrated Stadiumでサンダーランドとプレシーズンマッチを行い、1-0で勝利した。8分にルーカス・ヌメチャが決めた得点が決勝点となった。"
+        },
+        {
+          "type": "heading",
+          "text": "田中碧が先発、中盤で好評価"
+        },
+        {
+          "type": "paragraph",
+          "text": "田中碧はリーズの先発メンバーに入り、得点やアシストはなかった。試合中のリーズ関連コミュニティでは、先発時の安定感や前半のパフォーマンスを評価する声が寄せられた一方、中盤全体の厚みや他選手との比較をめぐる慎重な意見もあった。"
+        },
+        {
+          "type": "paragraph",
+          "text": "以下は田中碧のプレー内容を確認するための非公式ハイライト動画です。公式映像や記事の事実確認資料ではありません。"
+        },
+        {
+          "type": "video",
+          "title": "田中碧のプレー集を見る",
+          "embedUrl": "https://www.youtube.com/embed/uYwb7wfSHcU",
+          "href": "https://youtu.be/uYwb7wfSHcU?si=LSHnZgXy3ZEvvK5X",
+          "provider": "YouTube"
+        },
+        {
+          "type": "heading",
+          "text": "田中碧が先発した試合への海外ファンの反応"
+        },
+        {
+          "type": "reactions",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "※「Tank」と「Tanaka」を掛けた造語。田中の力強いプレーを称賛している。"
+        },
+        {
+          "type": "reactions",
+          "start": 4,
+          "end": 32
+        },
+        {
+          "type": "text",
+          "role": "source",
+          "text": "リーズ・ユナイテッド公式：2026年プレシーズン日程（対戦日時・会場）",
+          "href": "https://www.leedsunited.com/en/news/leeds-united-to-face-fc-augsburg-in-final-pre-season-fixture"
+        },
+        {
+          "type": "text",
+          "role": "source",
+          "text": "リーズ・ユナイテッド公式：米国ツアー帯同メンバー",
+          "href": "https://www.leedsunited.com/en/news/travelling-squad-named-for-usa-pre-season-tour"
+        },
+        {
+          "type": "text",
+          "role": "source",
+          "text": "Reddit r/LeedsUnited：サンダーランド戦の先発発表スレッド",
+          "href": "https://www.reddit.com/r/LeedsUnited/comments/1vb88qo/line_up_vs_sunderland/"
+        },
+        {
+          "type": "text",
+          "role": "source",
+          "text": "Reddit r/LeedsUnited：サンダーランド戦の試合スレッド",
+          "href": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/"
+        },
+        {
+          "type": "text",
+          "role": "source",
+          "text": "Reddit r/LeedsUnited：サンダーランド戦の試合後スレッド",
+          "href": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/"
+        }
+      ],
+      "auditNote": "32件はReddit r/LeedsUnitedの公開投稿から原文と個別URLを直接確認して採用。田中本人への直接反応13件、試合全体・リーズの前半や選手評価への反応19件。掲載順は両区分を混在させ、区分は各reactionのauditCategoryに保持した。",
+      "auditSources": [
+        {
+          "label": "リーズ対サンダーランド 試合スレッド",
+          "url": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/"
+        },
+        {
+          "label": "リーズ対サンダーランド 試合後スレッド",
+          "url": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/"
+        }
+      ]
+    },
+    {
       "articleId": "shinji-kagawa-cerezo-dortmund-reunion",
       "listOnHome": true,
       "relatedEligible": true,
