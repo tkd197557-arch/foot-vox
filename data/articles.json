@@ -556,28 +556,14 @@
           "role": "source",
           "text": "リーズ・ユナイテッド公式：米国ツアー帯同メンバー",
           "href": "https://www.leedsunited.com/en/news/travelling-squad-named-for-usa-pre-season-tour"
-        },
-        {
-          "type": "text",
-          "role": "source",
-          "text": "Reddit r/LeedsUnited：サンダーランド戦の先発発表スレッド",
-          "href": "https://www.reddit.com/r/LeedsUnited/comments/1vb88qo/line_up_vs_sunderland/"
-        },
-        {
-          "type": "text",
-          "role": "source",
-          "text": "Reddit r/LeedsUnited：サンダーランド戦の試合スレッド",
-          "href": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/"
-        },
-        {
-          "type": "text",
-          "role": "source",
-          "text": "Reddit r/LeedsUnited：サンダーランド戦の試合後スレッド",
-          "href": "https://www.reddit.com/r/LeedsUnited/comments/1vbcn05/postmatch_thread_leeds_united_vs_sunderland/"
         }
       ],
       "auditNote": "32件はReddit r/LeedsUnitedの公開投稿から原文と個別URLを直接確認して採用。田中本人への直接反応13件、試合全体・リーズの前半や選手評価への反応19件。掲載順は両区分を混在させ、区分は各reactionのauditCategoryに保持した。",
       "auditSources": [
+        {
+          "label": "リーズ対サンダーランド 先発発表スレッド",
+          "url": "https://www.reddit.com/r/LeedsUnited/comments/1vb88qo/line_up_vs_sunderland/"
+        },
         {
           "label": "リーズ対サンダーランド 試合スレッド",
           "url": "https://www.reddit.com/r/LeedsUnited/comments/1vb968y/match_thread_leeds_united_vs_sunderland_premier/"
